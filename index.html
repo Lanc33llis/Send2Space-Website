@@ -5,7 +5,6 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css" href="normalize.css">
     </head>
-
     <style>
         body{
             margin: 0px;
@@ -13,30 +12,55 @@
             overflow-x: hidden;
         }
     </style>
-
-    <header>
-        <div style="display: flex; height: 25%; width: 100%; justify-content: flex-end; background-color: rgba(255, 255, 255, .5); z-index: 4; box-shadow: 0px 10px 6px rgba(0, 0, 0, .16);">
-            <h1 style="display: flex; width: 35%; justify-content: space-evenly; z-index: 4;">
-                <a href="/">
-                    home
-                </a>
-                <a href="/about.html">
-                    about
-                </a>
-                <a href="/blog.html">
-                    blog
-                </a>
-            </h1>
-        </div>
-
-        <div style="display: block; position: absolute; left: 0px; top: 0px; z-index: -1;">
-            <img src="images/asael-pena.jpg" style="width: 2000px;">
-        </div>
-
-        <section style="display: block; position: abolute; left: 0px; top: 0px; z-index: 2; background-color: rgba(255, 255, 255, .3); width: 2000px; height: 1125px;"></section>
-
-        <div style="position:absolute; top: 0px; left: 0px; width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; z-index: 3;">
-            <img src="images/send2spacelogo.svg" style="height: 25%; width: auto;">
-        </div>
+    <header id="navtext" style="display: flex; height: 8vh; width: 100%;  background-color: rgba(255, 255, 255, .25); z-index: 4; box-shadow: 0px 10px 6px rgba(0, 0, 0, .15); align-items: center;">
+        <nav style="display: flex; justify-content: space-evenly; z-index: 4;">
+            <a href="/">
+                home
+            </a>
+            <a href="/about.html">
+                about
+            </a>
+            <a href="/blog.html">
+                blog
+            </a>
+        </nav>
     </header>
+
+    <div style="display: block; position: absolute; left: 0px; top: 0px; z-index: -1;">
+        <img src="images/asael-pena.jpg" style="height: 1100px;"> <!-- width: 200px-->
+        <section style="display:block; position: absolute; left: 0px; top: 0px; z-index: 0; background-color: rgba(255, 255, 255, .3); width: 100vw; height: 1100px;"></section>
+    </div>
+    <section style="width: 100vw; height: 92vh; display: flex; align-items: center; justify-content: center; z-index: 3; flex-direction: column;">
+        <img src="images/send2spacelogo.svg" style="height: 25%; width: auto;">
+        <h1 style="display: flex; justify-content: space-evenly; width: 50%; font-size: 3vw;">
+            <a href="mailto:legacyhs@send2space.org">
+                CONTACT
+            </a>
+            <a style="color: black;">
+                |
+            </a>
+            <a href="/sponser.html">
+                SPONSOR
+            </a>
+            <a style="color: black;">
+                |
+            </a>
+            <a href="/join-us.html">
+                JOIN US
+            </a>
+        </h1>
+    </section>
+        
+    <section style="width: 100vw; height: 80vh; background-color: #F3F3F3;">
+        <div style="height: 3%; width: 100%;">
+
+        </div>
+        <h2 style="text-align: center;">
+            Dedicated towards reaching the skies
+        </h2>
+    </section>
+
+    <section style="height: 80vh; width: 100vw;">
+
+    </section>
 </html>

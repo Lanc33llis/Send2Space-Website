@@ -1,24 +1,66 @@
 @font-face{
     font-family: Exo, Arial;
-    src: url(fonts/Exo-Bold.ttf);
+    src: url(fonts/Exo.ttf);
+    font-weight: normal;
+}
+
+@font-face{
+    font-family: Nasa, Arial;
+    src: url(fonts/nasalization.ttf);
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face{
+    font-family:"Nasalization";
+    src:url("fonts/nasa.woff2") format("woff2"),url("fonts/nasa.woff") format("woff");
+}
+
+
+nav{
+    font-family: Exo, Arial;
     font-weight: bold;
+    font-size: 35px;
+}
+
+h1{
+    font-family: Nasalization, Arial;
+    font-weight: initial;
+}
+
+h2{
+    font-family: Exo, Arial;
+    font-weight: normal;
+    font-size: 40px;
 }
 
 a{
     text-decoration: none;
     color: black;
-    transition: color .1s;
+    transition: color .15s;
 }
 
 a:hover{
-    color: #db4f4a
-}
-
-h1{
-    font-family: Exo, Arial;
-    font-weight: bold;
+    color: #af130d
 }
 
 p{
     font-size: 60px;
+}
+
+#navtext{
+    justify-content: flex-end;
+}
+
+#navtext > :first-child{
+    width: 35%;
+}
+
+@media (max-width: 1400px){
+    #navtext{
+        justify-content: center;
+    }
+    #navtext > :first-child{
+        width: 100%;
+    }
 }
