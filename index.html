@@ -12,7 +12,7 @@
             overflow-x: hidden;
         }
     </style>
-    <header id="navtext" style="display: flex; height: 8vh; width: 100%;  background-color: rgba(255, 255, 255, .25); z-index: 4; box-shadow: 0px 10px 6px rgba(0, 0, 0, .15); align-items: center;">
+    <header id="nav-text" style="display: flex; height: 75px; width: 100%;  background-color: rgba(255, 255, 255, .25); z-index: 4; box-shadow: 0px 10px 6px rgba(0, 0, 0, .15); align-items: center;">
         <nav style="display: flex; justify-content: space-evenly; z-index: 4;">
             <a href="/">
                 home
@@ -25,14 +25,13 @@
             </a>
         </nav>
     </header>
-
     <div style="display: block; position: absolute; left: 0px; top: 0px; z-index: -1;">
         <img src="images/asael-pena.jpg" style="height: 1100px;"> <!-- width: 200px-->
         <section style="display:block; position: absolute; left: 0px; top: 0px; z-index: 0; background-color: rgba(255, 255, 255, .3); width: 100vw; height: 1100px;"></section>
     </div>
     <section style="width: 100vw; height: 92vh; display: flex; align-items: center; justify-content: center; z-index: 3; flex-direction: column;">
         <img src="images/send2spacelogo.svg" style="height: 25%; width: auto;">
-        <h1 style="display: flex; justify-content: space-evenly; width: 50%; font-size: 3vw;">
+        <h1 id="header-under-logo" style="display: flex; justify-content: space-evenly; width: 50%;">
             <a href="mailto:legacyhs@send2space.org">
                 CONTACT
             </a>
@@ -50,17 +49,30 @@
             </a>
         </h1>
     </section>
-        
-    <section style="width: 100vw; height: 80vh; background-color: #F3F3F3;">
-        <div style="height: 3%; width: 100%;">
-
-        </div>
-        <h2 style="text-align: center;">
+    <section style="width: 100vw; height: 800px; background-color: #3a3a3a;">
+        <div style="height: 3%; width: 100%; background-color: #5e5e5e;"></div>
+        <h2 style="text-align: center; color: white; font-size: 50px;">
             Dedicated towards reaching the skies
         </h2>
-    </section>
-
-    <section style="height: 80vh; width: 100vw;">
-
+        <section style="display: flex; width: 100%; height: 90%; justify-content: center;">
+            <img id="hab-balloon" src="images/TeamOffutt.jpg" style="height: 75%; width: auto; padding: 25px;">
+            <section id="text-next-to-hab-image" style="display: flex; padding: 25px; flex-direction: column;">
+                <h2>
+                    Send2Space is a 501(c)(3) nonprofit organization.
+                </h2>
+                <p>
+                    Here in San Antonio, Texas, we strive to continue their mission of promoting educational equitability. <br><br>
+                    
+                </p>
+                <h2>
+                    For the students and by the students.
+                </h2>
+                <p>
+                    LEE Send2Space is a charter of Send2Space completely run by students for students. LEE Send2Space is also a club at the International School of the Americas.
+                    <br><br>We plan to bring new STEM opportunities to our peers and ourselves by launching a high-altitude balloon into low-orbit space. Whether you've never heard
+                    of a high-altitude balloon or have sent rockets up, LEE Send2Space is here to provide new experiences, new ideas, and new colleagues. 
+                </p>
+            </section>
+        </section>
     </section>
 </html>

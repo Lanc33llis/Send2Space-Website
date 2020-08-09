@@ -1,19 +1,21 @@
 @font-face{
-    font-family: Exo, Arial;
-    src: url(fonts/Exo.ttf);
-    font-weight: normal;
-}
-
-@font-face{
-    font-family: Nasa, Arial;
-    src: url(fonts/nasalization.ttf);
-    font-style: normal;
-    font-weight: 400;
+    font-family: "Exo";
+    src: url(fonts/Exo.ttf) format("truetype");
 }
 
 @font-face{
     font-family:"Nasalization";
     src:url("fonts/nasa.woff2") format("woff2"),url("fonts/nasa.woff") format("woff");
+}
+
+@font-face{
+    font-family: "Recursive";
+    src: url(fonts/Recursive.ttf) format("truetype");
+}
+
+@font-face{
+    font-family: "Catamaran";
+    src: url(fonts/Catamaran.ttf) format("truetype");
 }
 
 
@@ -26,12 +28,14 @@ nav{
 h1{
     font-family: Nasalization, Arial;
     font-weight: initial;
+    font-size: 3vw;
 }
 
 h2{
     font-family: Exo, Arial;
     font-weight: normal;
-    font-size: 40px;
+    font-size: 45px;
+    color: white;
 }
 
 a{
@@ -44,23 +48,53 @@ a:hover{
     color: #af130d
 }
 
-p{
-    font-size: 60px;
+section > p{
+    font-size: 25px;
+    font-family: Catamaran;
+    color: white;
+    font-weight: 100;
+    width: 60%;
 }
 
-#navtext{
+section > h2{
+    font-size: 30px; 
+    color: #ca6865;
+}
+
+#nav-text{
     justify-content: flex-end;
 }
 
-#navtext > :first-child{
+#nav-text > :first-child{
     width: 35%;
 }
 
+#text-next-hab-image{
+    width: 40%;
+}
+
 @media (max-width: 1400px){
-    #navtext{
+    #nav-text{
         justify-content: center;
     }
-    #navtext > :first-child{
+    #nav-text > :first-child{
         width: 100%;
+    }
+    #header-under-logo{
+        font-size: 3vmax;
+        min-width: 75%;
+    }
+}
+
+@media (max-width: 1300px){
+    #hab-balloon{
+        display: none;
+    }
+    #text-next-to-hab-image{
+        text-align: center;
+    }
+    #text-next-to-hab-image > p{
+        width: 100%;
+        font-size: 16px;
     }
 }
