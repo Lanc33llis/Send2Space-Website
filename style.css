@@ -59,6 +59,7 @@ section > p{
 section > h2{
     font-size: 30px; 
     color: #ca6865;
+    text-align: center;
 }
 
 #nav-text{
@@ -71,6 +72,9 @@ section > h2{
 
 #text-next-to-hab-image{
     width: 40%;
+    height: 100%;
+    padding: 25px; 
+    height: 75%;
 }
 
 #text-next-to-hab-image > p{
@@ -98,6 +102,7 @@ section > h2{
     #text-next-to-hab-image{
         text-align: center;
         width: 60%;
+        padding-top: 100px; 
     }
     #text-next-to-hab-image > p{
         width: 100%;
