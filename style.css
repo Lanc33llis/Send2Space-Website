@@ -56,6 +56,30 @@ section > p{
     width: 60%;
 }
 
+.about-section > p{
+    color: black;
+    font-family: Catamaran;
+}
+
+.about-section > h2{
+    color: black;
+    font-family: Catamaran;
+}
+
+.headshot-section{
+    display: flex;
+    flex-direction: column; 
+    height: 100%;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.headshot-section > h2{
+    font-family: Catamaran;
+    color: #707070;
+    margin: 0px;
+}
+
 section > h2{
     font-size: 30px; 
     color: #ca6865;
