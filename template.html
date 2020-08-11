@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="normalize.css">
+    </head>
+    <header id="default-header">
+        <style>
+        #header-section{
+            display: flex; 
+            height: 75px; 
+            width: 100%;  
+            background-color: rgba(255, 255, 255, .25); 
+            z-index: 4; box-shadow: 0px 10px 6px rgba(0, 0, 0, .15); 
+            align-items: center;
+            justify-content: flex-end;
+            }
+        #instagram-photo{
+            height: 75px;
+            width: auto;
+            position: absolute;
+        }
+        #nav-section{
+            display: flex; 
+            justify-content: space-evenly; 
+            z-index: 4; 
+            height: 100%;
+            width: 30%;
+        }
+        .nav-text{
+            text-decoration: none;
+            color: black;
+            transition: color .15s;
+            font-family: Exo, Arial;
+            font-weight: bold;
+            font-size: 35px;
+            text-align: center;
+        }
+        @media (max-width: 1400px){
+            #header-section{
+            justify-content: center;
+            }
+            #header-section > :last-child{
+            width: 95%;
+            }
+        }
+        </style>
+        <a id="instagram-photo" href="https://www.instagram.com/send2space_lee/">
+            <img src="/images/instagram2.svg" style="height: 75px">
+        </a>
+        <section id="header-section">
+            <nav id="nav-section">
+                <a class="nav-text" href="/">
+                    home
+                </a>
+                <a class="nav-text" href="/about.html">
+                    about
+                </a>
+                <a class="nav-text" href="/blog.html">
+                    blog
+                </a>
+            </nav>
+        </header>
+    </header>
+</html>
+

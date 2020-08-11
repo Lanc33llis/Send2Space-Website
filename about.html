@@ -4,6 +4,7 @@
         <title>About</title>        
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css" href="normalize.css">
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     </head>
     <style>
         body{
@@ -12,8 +13,18 @@
             overflow-x: hidden;
         }
     </style>
-    <header id="nav-text" style="display: flex; height: 75px; width: 100%; background-image: url(images/headerbackground.jpg); background-size: cover; background-attachment: fixed; z-index: 4; box-shadow: 0px 10px 6px rgba(0, 0, 0, .15); align-items: center;">
-        <nav style="display: flex; justify-content: space-evenly; z-index: 4;">
+    <header id="nav-header">
+        <script>
+            $("#nav-header").load("template.html #default-header")
+        </script>
+    </header>
+
+    <!--
+    <header id="nav-text" style="display: flex; height: 75px; width: 100%;  background-color: rgba(255, 255, 255, .25); z-index: 4; box-shadow: 0px 10px 6px rgba(0, 0, 0, .15); align-items: center;">
+        <a href="https://www.instagram.com/send2space_lee/" style="height: 100%";>
+            <img src="/images/instagram2.svg" height="100%">
+        </a>
+        <nav style="display: flex; justify-content: space-evenly; z-index: 4; height: 100%;">
             <a href="/">
                 home
             </a>
@@ -25,6 +36,7 @@
             </a>
         </nav>
     </header>
+    -->
     <div style="width: 100vw; height: 25px;"></div>
     <section class="about-section">
         <h2>
@@ -42,7 +54,7 @@
             We hope you’ll join us on Instagram @send2space_lee as we progress through this exciting journey and send things to space!
         </p>
     </section>
-    <section style="display: flex; flex-direction: column; height: 600px; width: 25%; align-items: left ; justify-content: space-evenly; left: 25%; position: relative;">
+    <section style="display: flex; flex-direction: column; height: 800px; width: 60%; align-items: left ; justify-content: space-evenly; left: 25%; position: relative;">
         <section class="about-section" style="display: flex;">
             <img src="images/TempHeadShot.png" height="100px">
             <section class="headshot-section">
@@ -50,7 +62,7 @@
                     Rae Xin
                 </h2>
                 <h2>
-                    Description
+                    Founder and President of LEE Send2Space
                 </h2>
             </section>
         </section>
@@ -61,7 +73,7 @@
                     Lance Ellis
                 </h2>
                 <h2>
-                    Description
+                    Vice-President of LEE Send2Space
                 </h2>
             </section>
         </section>
@@ -72,7 +84,7 @@
                     Ezra Harris
                 </h2>
                 <h2>
-                    Description
+                    Head of Engineering
                 </h2>
             </section>
         </section>
@@ -83,9 +95,36 @@
                     Rabia Shahid
                 </h2>
                 <h2>
-                    Description
+                    Head of Marketing
                 </h2>
             </section>
+        </section>
+    </section>
+    <section class="about-section" style="width: 100vw; height: 400px">
+        <div style="width: 100%; height: 3%"></div>
+        <h2 style="text-align: center; margin: 0; height: 5%; width: 100%; ">Members</h2>
+        <div style="width: 100%; height: 3%"></div>
+        <section class="about-section" id="member-list" style="display: flex;  position: relative;  height: 89%; flex-direction: column; flex-wrap: wrap; align-items: center;">
+            <p>Aspen E. Harrison</p>
+            <p>Brian Conger</p>
+            <p>Caleb Chase</p>
+            <p>Cannan Barnes</p>
+            <p>David Aguirre</p>
+            <p>Demián Arechar</p>
+            <p>Elisa Estrada</p>
+            <p>Erin DeHart</p>
+            <p>Gemma Maldonado</p>
+            <p>Giupa Mayhua</p>
+            <p>Hanna Femmel</p>
+            <p>Jackson Walters</p>
+            <p>Jasmine Van Natta</p>
+            <p>Joseph Tandy Mills</p>
+            <p>Marlene Mesa-Diaz</p>
+            <p>Nathaniel Amador</p>
+            <p>Nilo Mackey</p>
+            <p>Rishi Mathew</p>
+            <p>Stephen Ross</p>
+            <p>Tyler Lee Wilson</p>
         </section>
     </section>
 </html>
