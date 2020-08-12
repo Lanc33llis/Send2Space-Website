@@ -41,7 +41,7 @@
             <a style="color: black;">
                 |
             </a>
-            <a href="/sponser.html">
+            <a href="/sponsor.html">
                 SPONSOR
             </a>
             <a style="color: black;">
@@ -78,45 +78,39 @@
             </section>
         </section>
     </section>
+    <section style="width: 100vw; height: 500px; background-color: #efecff;">
+        <div style="height: 2%; width: 100%;"></div>
+        <h2 style="color: black; margin: 0; height: 8%;">
+            Our Amazing Local Sponsor
+        </h2>
+        <section style="display: flex; width: 100%; height: 88%;justify-content: center; align-items: center;">
+            <a href="http://www.check6partyshirts.com/" style="width: fit-content; height: 100%;">
+                <img src="images/Check 6 Party Shirts Logo.svg" height="100%">
+            </a>
+        </section>
+        <div style="height: 2%; width: 100%;"></div>
+    </section>
     <section style="width: 100vw; height: 400px; background-color: #FFECEC;">
         <div style="height: 2%; width: 100%;"></div>
         <h2 style="color: black; margin: 0; height: 8%;">
             Our Lovely Supporter
         </h2>
         <section style="display: flex; width: 100%; height: 90%;justify-content: center; align-items: center;">
-            <img src="images/SoccerGalaxy.svg" height="100%">
+            <a href="https://www.facebook.com/SoccerGalaxyUS/" style="width: fit-content; height: 100%;">
+                <img src="images/SoccerGalaxy.svg" height="100%">
+            </a>
         </section>
     </section>
-    <section style="background-color: #2C303D; width: 100vw; height: 600px; display: flex; justify-content: center; align-items: center;">
-        <section id="timeline" style="width: 80%; height: 10px; background-color: #5C6C96;"></section>
-        <section id="dates">
-            <p>Date<p>Description</p></p>
+    <section style="background-color: #2C303D; width: 100%; height: fit-content">
+        <div style="width: 100%; height: 25px;"></div>
+        <h2 style="color: white;">LEE Send2Space  Timeline</h2>
+        <section style="display: flex; width: 100%; height: 75px; justify-content: flex-end">
+            <img src="images/PastBubble.svg" height="75px" style="padding: 10px;">
+            <img src="images/FutureBubble.svg" height="75px" style="padding: 10px;">
+            <section style="width: 75px; height: 75px;"></section>
         </section>
-        <script>
-            function range(array){
-                let max = 0;
-                let min = 0;
-                for (let i = 0; i < array.length; i++){
-                    if (array[i] > max)
-                    {
-                        max = array[i]
-                    }
-                    if (array[i] < min){
-                        min = array[i]
-                    }
-                }
-                return max - min
-            }
-            var dates = document.getElementById("dates")
-            var datearary
-            var bubbles
-            for (let i = 0; i < dates.getElementsByTagName("P").length; i++){
-                datearary[i] = dates.getElementsByTagName("P")[i].innerHTML
-                let bubble = document.createElement("SVG")
-                bubble.innerHTML = bubbles.getElementsByTagName("P")[i].getElementsByTagName["P"].innerHTML
-            }
-            
-
-        </script>
+        <div style="width: 100%; height: 25px"></div>
+        <img src="images/Send2SpaceTimeline.svg" style="width: 90%; height: auto; left: 5%; position: relative;">
+        <div style="width: 100%; height: 25px"></div>
     </section>
 </html>
