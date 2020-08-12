@@ -4,3 +4,21 @@ Index home page mobile stuff
 
 */
 
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+      #nav-text{
+        min-height: 125px;
+      }
+      nav > a{
+        font-family: Catamaran, Arial;
+        font-size: 65px;
+      }
+      #header-under-logo{
+          font-size: 2.5vmax;
+          min-width: 80%;
+      }
+}

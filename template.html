@@ -44,9 +44,22 @@
             width: 95%;
             }
         }
+        @media only screen 
+        and (min-device-width: 320px) 
+        and (max-device-width: 480px)
+        and (-webkit-min-device-pixel-ratio: 2)
+        and (orientation: portrait) {
+            #header-section, #instagram-photo{
+            height: 125px;
+            }
+            #nav-section > a{
+            font-family: Catamaran, Arial;
+            font-size: 65px;
+            }
+        }
         </style>
         <a id="instagram-photo" href="https://www.instagram.com/send2space_lee/">
-            <img src="/images/instagram2.svg" style="height: 75px">
+            <img src="/images/instagram2.svg" style="height: 100%">
         </a>
         <section id="header-section">
             <nav id="nav-section">
