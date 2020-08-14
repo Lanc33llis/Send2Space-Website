@@ -1,2 +1,42 @@
 <!DOCTYPE html>
-<meta http-equiv="refresh" content="0; URL='/wip.html'"/>
+<html>
+    <head>
+        <title>Contact</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="normalize.css">
+        <link rel="stylesheet" type="text/css" href="mobile.css">
+        <!-- <meta http-equiv="refresh" content="0; URL='/wip.html'"/> -->
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    </head>
+    <style>
+        #rocket{
+            top: -100px;
+            animation-name: rocketanim;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes rocketanim{
+            0%   {top:-100px;}
+            20%  {top:-300px;}
+            40%  {top:-400px;}
+            60%  {top:-600px;}
+            80%  {top:-400px;}
+            100% {top:-100px;}
+        }
+    </style>
+    <section class="mobile-wrapper">
+        <header id="header">
+            <script>
+                $("#header").load("/template.html #default-header")
+            </script>
+        </header>
+        <body>
+            <section style="display: flex; justify-content: center; position: absolute; top: 0px; left: 0px; width: 100%">
+                <img src="images/rocketrail.svg" style="z-index: -2; height: 100vh; width: 25px;">
+            </section>
+            <section style="display: flex; justify-content: center; position: absolute; top: 0px; left: 0px; width: 100%">
+                <img id="rocket" src="images/Rocketship.svg" style="z-index: -1; height: 100vh; width: 200px; position: relative;  left: 0px; left: 1.3px">
+            </section>
+        </body>
+    </section>
+</html>
