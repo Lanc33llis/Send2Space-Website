@@ -28,6 +28,18 @@
             animation-duration: 5s;
             animation-iteration-count: infinite;
         }
+        #contact-body{
+            display: flex;
+            flex: 1;
+            overflow: auto;
+        }
+        #box{
+            display: flex;
+            width: 100%;
+        }
+        .content{
+            width: 50%;
+        }
         @keyframes rocketanim{
             0%   {top:-100px;}
             20%  {top:-400px;}
@@ -52,28 +64,32 @@
                     <img id="rocket" src="images/Rocketship.svg" style="z-index: -1; height: 100%; width: 200px; position: relative;  left: 0px; left: 1px">
                 </section>
             </section>
-            <section>
-                ashdsua
+            <section id="contact-body" style="width: 100%; height: 100%; position: absolute; top: 0">
+                <section id="box">
+                    <section class="content">
+                        1asdas
+                    </section>
+                    <section class="content">
+                        2asdsa
+                    </section>
+                </section>
             </section>
         </section>
     </body>
     <script>
         //https://taufik-nurrohman.js.org/dte-project/full-page-horizontal-scrolling.html
-        function scrollHorizontally(e) {
-                e = window.event || e;
-                var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-                document.documentElement.scrollLeft -= (delta*30); // Multiplied by 40
-                document.body.scrollLeft -= (delta*30); // Multiplied by 40
-                e.preventDefault();
-            }
-            if (window.addEventListener) {
-                // IE9, Chrome, Safari, Opera
-                window.addEventListener("mousewheel", scrollHorizontally, false);
-                // Firefox
-                window.addEventListener("DOMMouseScroll", scrollHorizontally, false);
-            } else {
-                // IE 6/7/8
-                window.attachEvent("onmousewheel", scrollHorizontally);
-            }
+        document.getElementById('contact-body').addEventListener('mousewheel', scrollHorizontally, false);
+        // Firefox
+        document.getElementById('contact-body').addEventListener('DOMMouseScroll', scrollHorizontally, false);
+        // IE 6/7/8
+        document.getElementById('contact-body').attachEvent('onmousewheel', scrollHorizontally);
+
+
+        function scrollHorizontally(e){
+        e = window.event || e;
+        var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+        document.getElementById('contact-body').scrollLeft -= (delta * 40); // Multiplied by 40
+        e.preventDefault();
+        }
     </script>
 </html>
