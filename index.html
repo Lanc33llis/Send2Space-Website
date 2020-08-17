@@ -5,6 +5,7 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css" href="normalize.css">
         <link rel="stylesheet" type="text/css" href="mobile.css">
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     </head>
     <style>
         body{
@@ -19,7 +20,7 @@
     </style>
     <body>
         <section id="mobile-override">
-            <header id="nav-text" style="display: flex; height: 75px; width: 100%;  background-color: rgba(255, 255, 255, .25); z-index: 4; box-shadow: 0px 10px 6px rgba(0, 0, 0, .15); align-items: center;">
+            <!-- <header id="nav-text" style="display: flex; height: 75px; width: 100%;  background-color: rgba(255, 255, 255, .25); z-index: 4; box-shadow: 0px 10px 6px rgba(0, 0, 0, .15); align-items: center;">
                 <a href="https://www.instagram.com/send2space_lee/" style="height: 100%";>
                     <img src="/images/instagram2.svg" height="100%">
                 </a>
@@ -34,10 +35,15 @@
                         blog
                     </a>
                 </nav>
+            </header> -->
+            <header id=header>
+                <script>
+                    $("#header").load("template.html #default-header")
+                </script>
             </header>
             <div style="display: block; position: absolute; left: 0px; top: 0px; z-index: -1;">
-                <img src="images/asael-pena.jpg" style="height: 1100px;">
-                <section style="display:block; position: absolute; left: 0px; top: 0px; z-index: 0; background-color: rgba(255, 255, 255, .3); width: 100vw; height: 1100px;"></section>
+                <img class="background-image" src="images/asael-pena.jpg">
+                <section class="background-image" style="display:block; position: absolute; left: 0px; top: 0px; z-index: 0; background-color: rgba(255, 255, 255, .3); width: 100vw;"></section>
             </div>
             <section style="width: 100vw; height: 92vh; display: flex; align-items: center; justify-content: center; z-index: 3; flex-direction: column;">
                 <img src="images/send2spacelogo.svg" style="height: 25%; width: auto;">
@@ -72,15 +78,18 @@
                             Send2Space is a 501(c)(3) nonprofit organization.
                         </h2>
                         <p>
-                            Here in San Antonio, Texas, we strive to continue their mission of promoting educational equitability. <br><br>                
+                            Located in San Antonio, Texas, LEE Send2Space strives to promote STEM by providing high school students with the unique 
+                            opportunities that come with building a high-altitude balloon. <br><br>                
                         </p>
                         <h2>
-                            For the students and by the students.
+                            Built for students, by students.
                         </h2>
                         <p>
-                            LEE Send2Space is a charter of Send2Space completely run by students for students. LEE Send2Space is also a club at the International School of the Americas.
-                            <br><br>We plan to bring new STEM opportunities to our peers and ourselves by launching a high-altitude balloon into low-orbit space. Whether you've never heard
-                            of a high-altitude balloon or have sent rockets up, LEE Send2Space is here to provide new experiences, new ideas, and new colleagues. 
+                            LEE Send2Space is a chapter of Send2Space at LEE High School, 100% operated by students.
+                            Our main goal is to design, build, and launch a high-altitude balloon (HAB) to low-orbit space. 
+                            Throughout this process, we hope to provide our members with interesting opportunities, including web development, engineering
+                            and design, and digital marketing. <br><br>
+                            Regardless of personal experience level, LEE Send2Space welcomes all students interested in any field.
                         </p>
                     </section>
                 </section>
@@ -97,7 +106,8 @@
                 </section>
                 <div style="height: 2%; width: 100%;"></div>
             </section>
-            <section style="width: 100vw; height: 400px; background-color: #FFECEC;">
+            <div style="width: 100vw; height: 50px; background-color: #efecff;"></div>
+            <section style="width: 100vw; height: 400px; background-color: #efecff;">
                 <div style="height: 2%; width: 100%;"></div>
                 <h2 style="color: black; margin: 0; height: 8%;">
                     Our Lovely Supporter

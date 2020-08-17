@@ -118,6 +118,10 @@ section > h2{
     left: 35%;
 }
 
+.background-image{
+    height: 1100px;
+}
+
 @media (max-width: 1400px){
     #nav-text{
         justify-content: center;
@@ -129,7 +133,7 @@ section > h2{
         width: 10%;
     }
     #header-under-logo{
-        font-size: 3vmax;
+        font-size: 2.5vmax;
         min-width: 75%;
     }
 }
@@ -157,5 +161,4 @@ section > h2{
     #member-list > p{
         font-size: 20px;
     }
-
 }
