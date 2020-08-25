@@ -10,35 +10,25 @@
     </head>
     <style>
         body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
+            height: 100%;
+            margin: 0;
+            padding: 0;
         }
-
         html {
             height: 100%;
         }
         .mobile-wrapper{
-            overflow: hidden;
-            position: relative;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            display: flex;
+            height: 100%;
+            flex-direction: column;
         }
         #rocket{
             top: -100px;
             animation-name: rocketanim;
             animation-duration: 5s;
             animation-iteration-count: infinite;
-        }
-        #contact-body{
-            display: flex;
-            flex: 1;
-            overflow: auto;
-        }
-        #box{
-            display: flex;
-            width: 100%;
-        }
-        .content{
-            width: 50%;
         }
         @keyframes rocketanim{
             0%   {top:-100px;}
@@ -50,46 +40,40 @@
         }
     </style>
     <body>
-        <header id="header" style="position: fixed;">
-            <script>
-                $("#header").load("/template.html #default-header")
-            </script>
-        </header>
-        <section id="thing" class="mobile-wrapper" style="width: 200%; height: 100%;">
-            <section style="float: left; width: 50%; height: 100%;">
-                <section style="display: flex; justify-content: center; position: absolute; top: 0px; left: 0px; width: 50%; height: 100%;">
-                    <img src="images/rocketrail.svg" style="z-index: -2; height: 100%; width: 25px;">
-                </section>
-                <section style="display: flex; justify-content: center; position: absolute; top: 0px; left: 0px; width: 50%; height: 100%;">
-                    <img id="rocket" src="images/Rocketship.svg" style="z-index: -1; height: 100%; width: 200px; position: relative;  left: 0px; left: 1px">
-                </section>
-            </section>
-            <section id="contact-body" style="width: 100%; height: 100%; position: absolute; top: 0">
-                <section id="box">
-                    <section class="content">
-                        1asdas
-                    </section>
-                    <section class="content">
-                        2asdsa
-                    </section>
-                </section>
+        <section class="mobile-wrapper">
+            <header id="header" style="position: fixed;">
+                <script>
+                    $("#header").load("/template.html #default-header")
+                </script>
+            </header>
+            <section>
+
             </section>
         </section>
     </body>
     <script>
         //https://taufik-nurrohman.js.org/dte-project/full-page-horizontal-scrolling.html
-        document.getElementById('contact-body').addEventListener('mousewheel', scrollHorizontally, false);
-        // Firefox
-        document.getElementById('contact-body').addEventListener('DOMMouseScroll', scrollHorizontally, false);
-        // IE 6/7/8
-        document.getElementById('contact-body').attachEvent('onmousewheel', scrollHorizontally);
 
+        // http://www.dte.web.id/2013/02/event-mouse-wheel.html
 
-        function scrollHorizontally(e){
-        e = window.event || e;
-        var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-        document.getElementById('contact-body').scrollLeft -= (delta * 40); // Multiplied by 40
-        e.preventDefault();
+        function scrollHorizontally(e) {
+            e = window.event || e;
+            var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+            document.documentElement.scrollLeft -= (delta*40); // Multiplied by 40
+            document.body.scrollLeft -= (delta*40); // Multiplied by 40
+            e.preventDefault();
         }
+
+        if (window.addEventListener){
+            // IE9, Chrome, Safari, Opera
+            window.addEventListener("mousewheel", scrollHorizontally, false);
+            // Firefox
+            window.addEventListener("DOMMouseScroll", scrollHorizontally, false);
+        } 
+        else{
+            // IE 6/7/8
+            window.attachEvent("onmousewheel", scrollHorizontally);
+        }
+
     </script>
 </html>
