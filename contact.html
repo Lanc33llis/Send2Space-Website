@@ -17,13 +17,6 @@
         html {
             height: 100%;
         }
-        .mobile-wrapper{
-            overflow-x: scroll;
-            overflow-y: hidden;
-            display: flex;
-            height: 100%;
-            flex-direction: column;
-        }
         #rocket{
             top: -100px;
             animation-name: rocketanim;
@@ -40,14 +33,30 @@
         }
     </style>
     <body>
-        <section class="mobile-wrapper">
-            <header id="header" style="position: fixed;">
+        <section class="mobile-wrapper" style="width: 200%; height: 100%; display: flex; flex-direction: column;">
+            <header id="header" style="position: fixed; flex: 0 1 auto;">
                 <script>
                     $("#header").load("/template.html #default-header")
                 </script>
             </header>
-            <section>
-
+            <div style="width: 100%; height: 75px"></div>
+            <section style="flex: 1 1 auto; width: 50%;">
+                <section style="width: 100%; height: 100%;">
+                    <img src="images/Rocketship-01.svg" width="5%" height="100%">
+                </section>
+                <svg id="trails" width="5%" height= "100%" style="position: relative; top: 100%;">
+                    <script>
+                       $("#trails").load("/images/Rocketshiptrails.svg #data")
+                    </script>
+                </svg>
+                <style>
+                    #data{
+                        height: 100%;
+                    }
+                    #Layer_1-2 > rect{
+                        height: 100vh;
+                    }
+                </style>
             </section>
         </section>
     </body>
