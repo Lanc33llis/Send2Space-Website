@@ -5,6 +5,7 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css" href="normalize.css">
         <link rel="stylesheet" type="text/css" href="mobile.css">
+        <link rel="icon" href="images/websiteicon.png">
         <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     </head>
     <style>
@@ -19,7 +20,7 @@
         }
     </style>
     <body>
-        <section id="mobile-override">
+        <section id="mobile-override" data-barba="wrapper">
             <!-- <header id="nav-text" style="display: flex; height: 75px; width: 100%;  background-color: rgba(255, 255, 255, .25); z-index: 4; box-shadow: 0px 10px 6px rgba(0, 0, 0, .15); align-items: center;">
                 <a href="https://www.instagram.com/send2space_lee/" style="height: 100%";>
                     <img src="/images/instagram2.svg" height="100%">
@@ -31,111 +32,119 @@
                     <a href="/about.html">
                         about
                     </a>
-                    <a href="/blog.html">
+                    <a href=  "/blog.html">
                         blog
                     </a>
                 </nav>
             </header> -->
-            <header id=header>
-                <script>
-                    $("#header").load("template.html #default-header")
-                </script>
-            </header>
-            <div style="display: block; position: absolute; left: 0px; top: 0px; z-index: -1;">
-                <img class="background-image" src="images/asael-pena.jpg">
-                <section class="background-image" style="display:block; position: absolute; left: 0px; top: 0px; z-index: 0; background-color: rgba(255, 255, 255, .3); width: 100vw;"></section>
-            </div>
-            <section style="width: 100vw; height: 92vh; display: flex; align-items: center; justify-content: center; z-index: 3; flex-direction: column;">
-                <img src="images/send2spacelogo.svg" style="height: 25%; width: auto;">
-                <h1 id="header-under-logo" style="display: flex; justify-content: space-evenly; width: 50%;">
-                    <a href="mailto:legacyhs@send2space.org">
-                        CONTACT
-                    </a>
-                    <a style="color: black;">
-                        |
-                    </a>
-                    <a href="/sponsor.html">
-                        SPONSOR
-                    </a>
-                    <a style="color: black;">
-                        |
-                    </a>
-                    <a href="/join-us.html">
-                        JOIN US
-                    </a>
-                </h1>
-            </section>
-            <section style="width: 100vw; height: 750px; background-color: #3a3a3a;">
-                <div style="height: 3%; width: 100%; background-color: #5e5e5e;"></div>
-                <div style="height: 1%; width: 100%"></div>
-                <h2 style="text-align: center; color: white; font-size: 50px; height: 6%; margin: 0;">
-                    Dedicated towards reaching the skies
-                </h2>
-                <section style="display: flex; width: 100%; height: 90%; justify-content: center;">
-                    <img id="hab-balloon" src="images/TeamOffutt.jpg" style="height: 75%; width: auto; padding: 25px;">
-                    <section id="text-next-to-hab-image" style="display: flex; flex-direction: column;">
-                        <h2>
-                            Send2Space is a 501(c)(3) nonprofit organization.
-                        </h2>
-                        <p>
-                            Located in San Antonio, Texas, LEE Send2Space strives to promote STEM by providing high school students with the unique 
-                            opportunities that come with building a high-altitude balloon. <br><br>                
-                        </p>
-                        <h2>
-                            Built for students, by students.
-                        </h2>
-                        <p>
-                            LEE Send2Space is a chapter of Send2Space at LEE High School, 100% operated by students.
-                            Our main goal is to design, build, and launch a high-altitude balloon (HAB) to low-orbit space. 
-                            Throughout this process, we hope to provide our members with interesting opportunities, including web development, engineering
-                            and design, and digital marketing. <br><br>
-                            Regardless of personal experience level, LEE Send2Space welcomes all students interested in any field.
-                        </p>
+            <main data-barba="container">
+                <header id=header>
+                    <script>
+                        $("#header").load("template.html #default-header")
+                    </script>
+                </header>
+                <section style="width: 100vw; height: 92vh; display: flex; align-items: center; justify-content: center; z-index: 3; flex-direction: column;">
+                    <div style="display: block; position: absolute; left: 0px; top: 0px; z-index: -1;">
+                        <img class="background-image" src="images/asael-pena.jpg">
+                        <section class="background-image" style="display:block; position: absolute; left: 0px; top: 0px; z-index: 0; background-color: rgba(255, 255, 255, .3); width: 100vw;"></section>
+                    </div>
+                    <img src="images/send2spacelogo.svg" style="height: 25%; width: auto;">
+                    <h1 id="header-under-logo" style="display: flex; justify-content: space-evenly; width: 50%;">
+                        <a href="mailto:legacyhs@send2space.org">
+                            CONTACT
+                        </a>
+                        <a style="color: black;">
+                            |
+                        </a>
+                        <a href="/sponsor.html">
+                            SPONSOR
+                        </a>
+                        <a style="color: black;">
+                            |
+                        </a>
+                        <a href="/join-us.html">
+                            JOIN US
+                        </a>
+                    </h1>
+                </section>
+                <section style="width: 100vw; height: 750px; background-color: #3a3a3a;">
+                    <div style="height: 3%; width: 100%; background-color: #5e5e5e;"></div>
+                    <div style="height: 1%; width: 100%"></div>
+                    <h2 style="text-align: center; color: white; font-size: 50px; height: 6%; margin: 0;">
+                        Dedicated towards reaching the skies
+                    </h2>
+                    <section style="display: flex; width: 100%; height: 90%; justify-content: center;">
+                        <img id="hab-balloon" src="images/TeamOffutt.jpg" style="height: 75%; width: auto; padding: 25px;">
+                        <section id="text-next-to-hab-image" style="display: flex; flex-direction: column;">
+                            <h2>
+                                Send2Space is a 501(c)(3) nonprofit organization.
+                            </h2>
+                            <p>
+                                Located in San Antonio, Texas, LEE Send2Space strives to promote STEM by providing high school students with the unique 
+                                opportunities that come with building a high-altitude balloon. <br><br>                
+                            </p>
+                            <h2>
+                                Built for students, by students.
+                            </h2>
+                            <p>
+                                LEE Send2Space is a chapter of Send2Space at LEE High School, 100% operated by students.
+                                Our main goal is to design, build, and launch a high-altitude balloon (HAB) to low-orbit space. 
+                                Throughout this process, we hope to provide our members with interesting opportunities, including web development, engineering
+                                and design, and digital marketing. <br><br>
+                                Regardless of personal experience level, LEE Send2Space welcomes all students interested in any field.
+                            </p>
+                        </section>
                     </section>
                 </section>
-            </section>
-            <section style="width: 100vw; height: 500px; background-color: #efecff;">
-                <div style="height: 2%; width: 100%;"></div>
-                <h2 style="color: black; margin: 0; height: 8%;">
-                    Our Amazing Local Sponsors
-                </h2>
-                <section style="display: flex; width: 100%; height: 88%;justify-content: center; align-items: center; flex-direction: column;">
-                    <a href="http://www.check6partyshirts.com/" style="width: fit-content; height: 65%;">
-                        <img src="images/CheckSixPartyShirts.svg" height="100%">
-                    </a>
-                    <a href="https://codeup.com/" style="width:fit-content; height: 35%;">
-                        <img src="images/codeup.svg" height="100%">
-                    </a>
+                <section style="width: 100vw; height: 500px; background-color: #efecff;">
+                    <div style="height: 2%; width: 100%;"></div>
+                    <h2 style="color: black; margin: 0; height: 8%;">
+                        Our Amazing Local Sponsors
+                    </h2>
+                    <section style="display: flex; width: 100%; height: 88%;justify-content: center; align-items: center; flex-direction: column;">
+                        <a href="http://www.check6partyshirts.com/" style="width: fit-content; height: 65%;">
+                            <img src="images/CheckSixPartyShirts.svg" height="100%">
+                        </a>
+                        <a href="https://codeup.com/" style="width:fit-content; height: 35%;">
+                            <img src="images/codeup.svg" height="100%">
+                        </a>
+                    </section>
+                    <div style="height: 2%; width: 100%;"></div>
                 </section>
-                <div style="height: 2%; width: 100%;"></div>
-            </section>
-            <div style="width: 100vw; height: 50px; background-color: #efecff;"></div>
-            <section style="width: 100vw; height: 400px; background-color: #efecff;">
-                <div style="height: 2%; width: 100%;"></div>
-                <h2 style="color: black; margin: 0; height: 8%;">
-                    Our Lovely Supporters
-                </h2>
-                <section style="display: flex; width: 100%; height: 90%;justify-content: center; align-items: center; flex-direction: column;">
-                    <a href="https://www.facebook.com/SoccerGalaxyUS/" style="height: 50%;">
-                        <img src="images/SoccerGalaxy.svg" height="100%">
-                    </a>
-                    <a href="http://driveinusa.com/index.php?change=true" style="height: 50%;">
-                        <img src="images/stars_and_stripes.png" height="100%">
-                    </a>
+                <div style="width: 100vw; height: 50px; background-color: #efecff;"></div>
+                <section style="width: 100vw; height: 400px; background-color: #efecff;">
+                    <div style="height: 2%; width: 100%;"></div>
+                    <h2 style="color: black; margin: 0; height: 8%;">
+                        Our Lovely Supporters
+                    </h2>
+                    <section style="display: flex; width: 100%; height: 90%;justify-content: center; align-items: center; flex-direction: column;">
+                        <a href="https://www.facebook.com/SoccerGalaxyUS/" style="height: 50%;">
+                            <img src="images/SoccerGalaxy.svg" height="100%">
+                        </a>
+                        <a href="http://driveinusa.com/index.php?change=true" style="height: 50%;">
+                            <img src="images/stars_and_stripes.png" height="100%">
+                        </a>
+                    </section>
                 </section>
-            </section>
-            <section style="background-color: #2C303D; width: 100%; height: fit-content">
-                <div style="width: 100%; height: 25px;"></div>
-                <h2 style="color: white;">LEE Send2Space  Timeline</h2>
-                <section style="display: flex; width: 100%; height: 75px; justify-content: flex-end">
-                    <img src="images/PastBubble.svg" height="75px" style="padding: 10px;">
-                    <img src="images/FutureBubble.svg" height="75px" style="padding: 10px;">
-                    <section style="width: 75px; height: 75px;"></section>
+                <section style="background-color: #2C303D; width: 100%; height: fit-content">
+                    <div style="width: 100%; height: 25px;"></div>
+                    <h2 style="color: white;">LEE Send2Space  Timeline</h2>
+                    <section style="display: flex; width: 100%; height: 75px; justify-content: flex-end">
+                        <img src="images/PastBubble.svg" height="75px" style="padding: 10px;">
+                        <img src="images/FutureBubble.svg" height="75px" style="padding: 10px;">
+                        <section style="width: 75px; height: 75px;"></section>
+                    </section>
+                    <div style="width: 100%; height: 25px"></div>
+                    <img src="images/Send2SpaceTimeline.svg" style="width: 90%; height: auto; left: 5%; position: relative;">
+                    <div style="width: 100%; height: 25px"></div>
                 </section>
-                <div style="width: 100%; height: 25px"></div>
-                <img src="images/Send2SpaceTimeline.svg" style="width: 90%; height: auto; left: 5%; position: relative;">
-                <div style="width: 100%; height: 25px"></div>
-            </section>
+            </main>
+
         </section>
+
+        <script src="barba.js"></script>
+        <script src="barba-css.js"></script>
+        <script src="script.js"></script>
+
     </body>
 </html>
