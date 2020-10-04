@@ -19,62 +19,31 @@
         html {
             height: 100%;
         }
-        #rocket{
-            top: -100px;
-            animation-name: rocketanim;
-            animation-duration: 5s;
-            animation-iteration-count: infinite;
-        }
-        @keyframes rocketanim{
-            0%   {top:-100px;}
-            20%  {top:-400px;}
-            40%  {top:-300px;}
-            60%  {top:-500px;}
-            80%  {top:-600px;}
-            100% {top:-100px;}
-        }
+
     </style>
     <body>
-        <section class="mobile-wrapper" style="width: 200%; height: 100%; display: flex; flex-direction: column;">
-            <header id="header" style="position: fixed; flex: 0 1 auto;">
+        <main class="mobile-wrapper" style="width: 100%; height: 100%; display: flex; flex-direction: column;">
+            <header id="header">
                 <script>
                     $("#header").load("/template.html #default-header")
                 </script>
             </header>
-            <div style="width: 100%; height: 75px"></div>
-            <section style="flex: 1 1 auto; width: 50%;">
-                <section style="display: flex; justify-content: center; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; align-content: center;">
-                    <img src="images/Rocketship-01.svg" width="100px">
+            <section class="contact-body" style="flex: 1 1; display: flex;">
+                <section style="display: flex; width: 50%; height: 100%; flex-direction: column; align-items: center;">
+                    <h1>
+                        Get in contact with LEE Send2Space
+                    </h1>
+                    <form action="/" method="get" id="send">
+
+                    </form>
                 </section>
-                <section style="display: flex; justify-content: center; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
-                    <img src="images/rocketshiptrails.svg" width="100px" style="position: relative; top: -100px; left: -2px">
+                <section style="display: flex; width: 50%; height: 100%;">
+                    asdad
                 </section>
             </section>
-        </section>
+        </main>
     </body>
-    <script>
-        //https://taufik-nurrohman.js.org/dte-project/full-page-horizontal-scrolling.html
-        // http://www.dte.web.id/2013/02/event-mouse-wheel.html
-        function scrollHorizontally(e) {
-            e = window.event || e;
-            var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-            document.documentElement.scrollLeft -= (delta*40); // Multiplied by 40
-            document.body.scrollLeft -= (delta*40); // Multiplied by 40
-            e.preventDefault();
-        }
-
-        if (window.addEventListener){
-            // IE9, Chrome, Safari, Opera
-            window.addEventListener("mousewheel", scrollHorizontally, false);
-            // Firefox
-            window.addEventListener("DOMMouseScroll", scrollHorizontally, false);
-        } 
-        else{
-            // IE 6/7/8
-            window.attachEvent("onmousewheel", scrollHorizontally);
-        }
-    </script>
-
+    
     <script src="barba.js"></script>
     <script src="barba-css.js"></script>
     <script src="script.js"></script>

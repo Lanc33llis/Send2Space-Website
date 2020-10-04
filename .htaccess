@@ -3,8 +3,8 @@ RewriteEngine On
 RewriteCond %{HTTP:X-Forwarded-Proto} =http
 
 RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
 
  <IfModule mod_headers.c>
 
@@ -14,5 +14,5 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
  </IfModule>
 
- ErrorDocument 404 /wip.html
+ErrorDocument 404 /wip.html
 ErrorDocument 403 /wip.html

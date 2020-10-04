@@ -18,6 +18,33 @@
     src: url(fonts/Catamaran.ttf) format("truetype");
 }
 
+@font-face{
+    font-family: "NotoSansKR";
+    src: url(fonts/NotoSansKR-Regular.otf) format("opentype");
+    font-weight: normal;
+}
+
+@font-face{
+    font-family: "NotoSansKR";
+    src: url(fonts/NotoSansKR-Bold.otf) format("opentype");
+    font-weight: bold;
+}
+
+html{
+    height: 100%;
+    width: 100%;
+}
+
+
+body{
+    height: 100%;
+    width: 100%;
+}
+
+.blog{
+    overflow: hidden;
+}
+
 nav{
     font-family: Exo, Arial;
     font-weight: bold;
@@ -122,6 +149,22 @@ section > h2{
     height: 1100px;
 }
 
+section.contact-body >* > h1 {
+    font-family: NotoSansKR, Arial;
+    height: fit-content;
+    text-align: center;
+}
+
+.mobile-wrapper{
+    height: 100%;
+    width: 100%;
+}
+
+#mobile-override{
+    height: 100%;
+    width: 100%;
+}
+
 @media (max-width: 1400px){
     #nav-text{
         justify-content: center;
@@ -164,7 +207,7 @@ section > h2{
 }
 
 .fade-enter-active, .fade-leave-active{
-    transition: opacity .75s ease;
+    transition: opacity .5s ease
 }
 
 .fade-leave{
@@ -173,6 +216,7 @@ section > h2{
 
 .fade-leave-to{
     opacity: 0;
+
 }
 
 .fade-enter{
