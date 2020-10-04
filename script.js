@@ -2,6 +2,9 @@ barba.use(barbaCss)
 
 barba.init({
     transitions: [{
-        name: "fade"
+        name: "fade",
+        afterEnter(){
+            $("#header").load("template.html #default-header")
+        }
     }]
 })

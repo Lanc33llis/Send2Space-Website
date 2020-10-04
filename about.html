@@ -15,29 +15,29 @@
             overflow-x: hidden;
         }
     </style>
-    <main data-barba="container"></main>
-        <header id="nav-header">
+    <main data-barba="container">
+        <header id="header">
             <script>
-                $("#nav-header").load("template.html #default-header")
+                $("#header").load("template.html #default-header")
             </script>
         </header>
         <!--
-        <header id="nav-text" style="display: flex; height: 75px; width: 100%;  background-color: rgba(255, 255, 255, .25); z-index: 4; box-shadow: 0px 10px 6px rgba(0, 0, 0, .15); align-items: center;">
-            <a href="https://www.instagram.com/send2space_lee/" style="height: 100%";>
-                <img src="/images/instagram2.svg" height="100%">
-            </a>
-            <nav style="display: flex; justify-content: space-evenly; z-index: 4; height: 100%;">
-                <a href="/">
-                    home
+            <header id="nav-text" style="display: flex; height: 75px; width: 100%;  background-color: rgba(255, 255, 255, .25); z-index: 4; box-shadow: 0px 10px 6px rgba(0, 0, 0, .15); align-items: center;">
+                <a href="https://www.instagram.com/send2space_lee/" style="height: 100%";>
+                    <img src="/images/instagram2.svg" height="100%">
                 </a>
-                <a href="/about.html">
-                    about
-                </a>
-                <a href="/blog.html">
-                    blog
-                </a>
-            </nav>
-        </header>
+                <nav style="display: flex; justify-content: space-evenly; z-index: 4; height: 100%;">
+                    <a href="/">
+                        home
+                    </a>
+                    <a href="/about.html">
+                        about
+                    </a>
+                    <a href="/blog.html">
+                        blog
+                    </a>
+                </nav>
+            </header>
         -->
         <div style="width: 100vw; height: 25px;"></div>
         <section class="about-section">
@@ -135,4 +135,8 @@
             </section>
         </section>
     </main>
+
+    <script src="barba.js"></script>
+    <script src="barba-css.js"></script>
+    <script src="script.js"></script>
 </html>
