@@ -2,10 +2,9 @@
 <html>
     <head>
         <title>Contact</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css" href="normalize.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css" href="mobile.css">
-        <!-- <meta http-equiv="refresh" content="0; URL='/wip.html'"/> -->
         <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
         <link rel="icon" href="images/websiteicon.png">
     </head>
@@ -28,17 +27,36 @@
                     $("#header").load("/template.html #default-header")
                 </script>
             </header>
-            <section class="contact-body" style="flex: 1 1; display: flex;">
-                <section style="display: flex; width: 50%; height: 100%; flex-direction: column; align-items: center;">
-                    <h1>
-                        Get in contact with LEE Send2Space
-                    </h1>
-                    <form action="/" method="get" id="send">
-
-                    </form>
-                </section>
-                <section style="display: flex; width: 50%; height: 100%;">
-                    asdad
+            <section style="flex: 1 1; display: flex; flex-direction: column;">
+                <h1 style="text-align: center; font-family: NotoSansKR; font-weight: bold; font-size: 60px; margin: 20px 0px 6px 0px;">
+                    Want to get in contact with us?
+                </h1>
+                <p style="color: black; text-align: center; width: 100%; margin: 5px 0px 25px 0px;">
+                    Drop us a message of any sorts. Questions, fundraising, what's our favorite color, etc.
+                </p>
+                <section class="contact-body" style="display: flex; flex: 1 1;">
+                    <section style="display: flex; width: 50%; height: 100%; flex-direction: column; align-items: center; ">
+                        <form class="contact-form" method="POST" action="https://formspree.io/f/xknpooyz" id="contact" style=" margin: 5px; flex: 1 1; width: 99%; display: flex; flex-direction: column; justify-content: space-evenly; align-items: center;">
+                            <label>Name?</label>
+                            <input name="name" id="name" for="name" style="width: 90%; height: 6%;"placeholder="Adam Smith..."></input>
+                            <label>Email?</label>
+                            <input name="_replyto" id="email" for="email" style="width: 90%; height: 6%;" placeholder="youremail@gmail.com..."></input>
+                            <label>Message:</label>
+                            <textarea name="message" id="message" for="message" style="width: 90%; height: 50%; text-align: left; padding: 3px;"></textarea>
+                            <input type="submit" value="send!" style="font-family: NotoSansKR; background-color: #ffa3a3; width: 10%; height: 5%; border: #ffa3a3; border-radius: 5px; cursor: pointer;"></input>
+                        </form>
+                    </section>
+                    <section style="display: flex; width: 50%; height: 100%; flex-direction: column; justify-content:space-around; align-self: center; background-image: url(/images/contactbg.svg); background-repeat: repeat-x;">
+                        <h2>
+                            Contact us at our email legacyhs@send2space.org
+                        </h2>
+                        <h2>
+                            or at our instagram lee_send2space
+                        </h2>
+                        <h2>
+                            or use this form here
+                        </h2>
+                    </section>
                 </section>
             </section>
         </main>
@@ -47,5 +65,6 @@
     <script src="barba.js"></script>
     <script src="barba-css.js"></script>
     <script src="script.js"></script>
+    <script src="makecontact.js"></script>
 
 </html>
