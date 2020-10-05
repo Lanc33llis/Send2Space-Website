@@ -4,8 +4,8 @@ barba.init({
     transitions: [{
         name: "fade",
         beforeEnter({current, next, trigger}){
-            const bodyLinks = document.querySelectorAll("body")
-            const href = next.url.path
+            let bodyLinks = document.querySelectorAll("body")
+            let href = next.url.path
 
             if(href != "/blog.html"){
                 bodyLinks[0].classList.remove("blog")
