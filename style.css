@@ -35,14 +35,15 @@ html{
     width: 100%;
 }
 
+body.blog{
+    overflow: hidden;
+}
 
 body{
     height: 100%;
     width: 100%;
-}
-
-.blog{
-    overflow: hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 nav{
