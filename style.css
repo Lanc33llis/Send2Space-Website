@@ -1,32 +1,32 @@
 @font-face{
     font-family: "Exo";
-    src: url(../fonts/Exo.ttf) format("truetype");
+    src: url(fonts/Exo.ttf) format("truetype");
 }
 
 @font-face{
     font-family:"Nasalization";
-    src:url("../fonts/nasa.woff2") format("woff2"),url("../fonts/nasa.woff") format("woff");
+    src:url("fonts/nasa.woff2") format("woff2"),url("fonts/nasa.woff") format("woff");
 }
 
 @font-face{
     font-family: "Recursive";
-    src: url(../fonts/Recursive.ttf) format("truetype");
+    src: url(fonts/Recursive.ttf) format("truetype");
 }
 
 @font-face{
     font-family: "Catamaran";
-    src: url(../fonts/Catamaran.ttf) format("truetype");
+    src: url(fonts/Catamaran.ttf) format("truetype");
 }
 
 @font-face{
     font-family: "NotoSansKR";
-    src: url(../fonts/NotoSansKR-Regular.otf) format("opentype");
+    src: url(fonts/NotoSansKR-Regular.otf) format("opentype");
     font-weight: normal;
 }
 
 @font-face{
     font-family: "NotoSansKR";
-    src: url(../fonts/NotoSansKR-Bold.otf) format("opentype");
+    src: url(fonts/NotoSansKR-Bold.otf) format("opentype");
     font-weight: bold;
 }
 
