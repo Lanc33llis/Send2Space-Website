@@ -2,9 +2,10 @@ RewriteEngine On
 
 RewriteCond %{HTTP:X-Forwarded-Proto} =http
 
+DirectoryIndex website/index.html
+
 RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{REQUEST_FILENAME} !-f
-
 
  <IfModule mod_headers.c>
 
