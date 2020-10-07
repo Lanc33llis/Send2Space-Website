@@ -68,7 +68,7 @@
     <script src="makecontact.js"></script>
     <script>
         (async function() {
-          let { text } = await( await fetch(`http://localhost:7071/api/message`)).json();
+          let { text } = await( await fetch(`/api/message`)).json();
           document.querySelector('#name').textContent = text;
         }())
       </script>
