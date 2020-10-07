@@ -47,7 +47,7 @@
                         </form>
                     </section>
                     <section style="display: flex; width: 50%; height: 100%; flex-direction: column; justify-content:space-around; align-self: center; background-image: url(/images/contactbg.svg); background-repeat: repeat-x;">
-                        <h2>
+                        <h2 id="test">
                             Contact us at our email legacyhs@send2space.org
                         </h2>
                         <h2>
@@ -66,5 +66,11 @@
     <script src="barba-css.js"></script>
     <script src="script.js"></script>
     <script src="makecontact.js"></script>
+    <script>
+        (async function() {
+          let { text } = await( await fetch(`http://localhost:7071/api/message`)).json();
+          document.querySelector('#name').textContent = text;
+        }())
+      </script>
 
 </html>
