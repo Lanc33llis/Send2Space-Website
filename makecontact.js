@@ -1,5 +1,3 @@
-
-
 function submit(event) {
   let name = form.elements["name"].value
   let email = form.elements["email"].value
@@ -9,6 +7,7 @@ function submit(event) {
   console.log(email)
   console.log(message)
 
+  
   
   event.preventDefault()
 }
