@@ -69,7 +69,7 @@
     <script>
         (async function() {
           let { text } = await( await fetch(`/api/message`)).json();
-          document.querySelector('#name').textContent = text;
+          document.querySelector('#test').textContent = text;
         }())
       </script>
 
