@@ -7,25 +7,12 @@ function submit(event) {
   console.log(email);
   console.log(message);
 
-  // let data = { name: name, email: email, message: message }(
-  //   (async function () {
-  //     $.ajax({
-  //       url: "/api/message",
-  //       type: "POST",
-  //       data: data,
-  //       async: true, 
-  //       success: function (response, textStatus, jqXHR) {
-  //         console.log(response);
-  //       },
-  //       error: function (jqXHR, textStatus, errorThrown) {
-  //         console.log(jqXHR);
-  //         console.log(textStatus);
-  //         console.log(errorThrown);
-  //       },
-  //     });
-  //     document.querySelector("#test").textContent = "Working!";
-  //   })()
-  // );
+  let data = { name, email, message }
+
+
+  $.post("http://localhost:5501/api/message", data)
+  document.querySelector("#test").textContent = "Working!"
+  
 
   event.preventDefault();
 }
