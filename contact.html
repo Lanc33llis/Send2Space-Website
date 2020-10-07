@@ -66,11 +66,5 @@
     <script src="barba-css.js"></script>
     <script src="script.js"></script>
     <script src="makecontact.js"></script>
-    <script>
-        (async function() {
-          let { text } = await( await fetch(`/api/message`)).json();
-          document.querySelector('#test').textContent = text;
-        }())
-      </script>
 
 </html>

@@ -7,7 +7,10 @@ function submit(event) {
   console.log(email);
   console.log(message);
 
-
+  (async function() {
+    let { text } = await( await fetch(`/api/message`)).json();
+    document.querySelector('#test').textContent = text;
+  }())
 
   event.preventDefault();
 }
