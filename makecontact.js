@@ -7,12 +7,9 @@ function submit(event) {
   console.log(email);
   console.log(message);
 
-  let data = { name, email, message }
-
-
-  $.post("http://localhost:5501/api/message", data)
-  document.querySelector("#test").textContent = "Working!"
-  
+  let data = { name: name, email: email, message: message }
+  // $.post("https://s2scontactapp.azurewebsites.net/", data)
+  $.post("http://localhost:3000/send", data)
 
   event.preventDefault();
 }
