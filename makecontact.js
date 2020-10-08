@@ -8,8 +8,7 @@ function submit(event) {
   console.log(message);
 
   let data = { name: name, email: email, message: message }
-  // $.post("https://s2scontactapp.azurewebsites.net/", data)
-  $.post("http://localhost:3000/send", data)
+  $.post("https://s2scontactapp.azurewebsites.net/send", data)
 
   event.preventDefault();
 }
