@@ -7,8 +7,6 @@ barba.init({
             let bodyLinks = document.querySelectorAll("body")
             let href = next.url.path
 
-            console.log(href)
-
             if(href === "/blog.html" || href === "/contact.html"){
                 bodyLinks[0].classList.add("blog")
             }
