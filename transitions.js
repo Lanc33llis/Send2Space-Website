@@ -21,6 +21,12 @@ barba.init({
     views: [{
         namespace: "form",
         beforeEnter(data) {
+          var valid = document.createElement('script');
+          valid.src = '//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js';
+          document.head.appendChild(valid);
+          var domPurify = document.createElement('script');
+          domPurify.src = 'https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.1.1/purify.min.js';
+          document.head.appendChild(domPurify);
             function submit(event) {
               //this is the form script on contact
                 let name = DOMPurify.sanitize(form.elements["name"].value);
