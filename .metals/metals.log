@@ -3,3 +3,4 @@
 2020.10.09 15:36:39 WARN  no build tool detected in workspace 'C:\Users\Lance\Documents\Send2Space-Website'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
 Oct 09, 2020 3:37:31 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFO: Unsupported notification method: $/setTraceNotification
+2020.10.09 17:12:47 INFO  shutting down Metals

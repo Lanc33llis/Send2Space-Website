@@ -1,2 +1,28 @@
 <!DOCTYPE html>
-<meta http-equiv="refresh" content="0; URL='/wip.html'"/>
+<html>
+  <head>
+    <title>Join Us</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="mobile.css" />
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link rel="icon" href="images/websiteicon.png" />
+  </head>
+  <body>
+      <section class="join-us" id="mobile-override" data-barba="wrapper">
+          <main data-barba="container">
+            <header id="header">
+                <script>
+                    $("#header").load("template.html #default-header");
+                </script>
+            </header>
+            <h1>
+                Want to join the team?
+            </h1>
+          </main>
+      </section>
+      <script src="barba.js"></script>
+      <script src="barba-css.js"></script>
+      <script src="transitions.js"></script>
+  </body>
+</html>

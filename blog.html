@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html style="height: 100%">
-    <head>
-        <title>Blog</title>        
-        <link rel="stylesheet" type="text/css" href="normalize.css">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="stylesheet" type="text/css" href="mobile.css">
-        <!-- <meta http-equiv="refresh" content="0; URL='/wip.html'"/> -->
-        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-        <link rel="icon" href="images/websiteicon.png">
-    </head>
-    <body class="blog">
-        <section style="height: 100%; margin: 0; padding: 0; " class="mobile-wrapper blog" data-barba="wrapper">
-            <main style="width: 100%; height: 100%; display: flex; flex-direction: column;" data-barba="container">
-                <header id="header">
-                    <script>
-                        $("#header").load("/template.html #default-header")
-                    </script>
-                </header>
-                <section style="flex: 1 1; width: 100%; height: 100%;">
-                    <iframe id="blog" src="https://send2space.blogspot.com/" style="width: 100%; height: 100%;" ></iframe>
-                </section>
-            </main>
+  <head>
+    <title>Blog</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="mobile.css" />
+    <!-- <meta http-equiv="refresh" content="0; URL='/wip.html'"/> -->
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link rel="icon" href="images/websiteicon.png" />
+  </head>
+  <body class="blog">
+    <section
+      style="height: 100%; margin: 0; padding: 0"
+      class="mobile-wrapper blog"
+      data-barba="wrapper"
+    >
+      <main
+        style="width: 100%; height: 100%; display: flex; flex-direction: column"
+        data-barba="container"
+      >
+        <header id="header">
+          <script>
+            $("#header").load("/template.html #default-header");
+          </script>
+        </header>
+        <section style="flex: 1 1; width: 100%; height: 100%">
+          <iframe
+            id="blog"
+            src="https://send2space.blogspot.com/"
+            style="width: 100%; height: 100%"
+          ></iframe>
         </section>
-    </body>
-    <script src="barba.js"></script>
-    <script src="barba-css.js"></script>
-    <script src="transitions.js"></script>
+      </main>
+    </section>
+  </body>
+  <script src="barba.js"></script>
+  <script src="barba-css.js"></script>
+  <script src="transitions.js"></script>
 </html>

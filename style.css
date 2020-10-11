@@ -1,256 +1,268 @@
-@font-face{
-    font-family: "Exo";
-    src: url(fonts/Exo.ttf) format("truetype");
+@font-face {
+  font-family: "Exo";
+  src: url(fonts/Exo.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Nasalization";
+  src: url("fonts/nasa.woff2") format("woff2"),
+    url("fonts/nasa.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Recursive";
+  src: url(fonts/Recursive.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Catamaran";
+  src: url(fonts/Catamaran.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "NotoSansKR";
+  src: url(fonts/NotoSansKR-Regular.otf) format("opentype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "NotoSansKR";
+  src: url(fonts/NotoSansKR-Bold.otf) format("opentype");
+  font-weight: bold;
 }
 
 @font-face{
-    font-family:"Nasalization";
-    src:url("fonts/nasa.woff2") format("woff2"),url("fonts/nasa.woff") format("woff");
+  font-family: "NotoSansKR";
+  src: url(fonts/NotoSansKR-Light.otf) format("opentype");
+  font-weight: lighter;
 }
 
-@font-face{
-    font-family: "Recursive";
-    src: url(fonts/Recursive.ttf) format("truetype");
+html {
+  height: 100%;
+  width: 100%;
 }
 
-@font-face{
-    font-family: "Catamaran";
-    src: url(fonts/Catamaran.ttf) format("truetype");
+body.blog {
+  overflow: hidden;
 }
 
-@font-face{
-    font-family: "NotoSansKR";
-    src: url(fonts/NotoSansKR-Regular.otf) format("opentype");
-    font-weight: normal;
+body {
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
-@font-face{
-    font-family: "NotoSansKR";
-    src: url(fonts/NotoSansKR-Bold.otf) format("opentype");
-    font-weight: bold;
+nav {
+  font-family: Exo, Arial;
+  font-weight: bold;
+  font-size: 35px;
+  text-align: center;
+  align-items: center;
+  width: 30%;
 }
 
-html{
-    height: 100%;
-    width: 100%;
+h1 {
+  font-family: Nasalization, Arial;
+  font-weight: initial;
+  font-size: 2vw;
 }
 
-body.blog{
-    overflow: hidden;
+h2 {
+  font-family: Exo, Arial;
+  font-weight: normal;
+  font-size: 45px;
+  color: white;
 }
 
-body{
-    height: 100%;
-    width: 100%;
-    overflow-y: scroll;
-    overflow-x: hidden;
+a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.15s;
 }
 
-nav{
-    font-family: Exo, Arial;
-    font-weight: bold;
-    font-size: 35px;
-    text-align: center;
-    align-items: center;
-    width: 30%;
+a:hover {
+  color: #af130d;
 }
 
-h1{
-    font-family: Nasalization, Arial;
-    font-weight: initial;
-    font-size: 2vw;
+section > p {
+  font-size: 25px;
+  font-family: Catamaran;
+  color: white;
+  font-weight: 100;
+  width: 60%;
 }
 
-h2{
-    font-family: Exo, Arial;
-    font-weight: normal;
-    font-size: 45px;
-    color: white;
+.about-section > p {
+  color: black;
+  font-family: Catamaran;
+  margin: 0;
+  width: fit-content;
 }
 
-a{
-    text-decoration: none;
-    color: black;
-    transition: color .15s;
+.about-section > h2 {
+  color: black;
+  font-family: Catamaran;
 }
 
-a:hover{
-    color: #af130d
+.headshot-section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding: 5px;
 }
 
-section > p{
-    font-size: 25px;
+.headshot-section > h2 {
+  font-family: Catamaran;
+  color: #707070;
+  margin: 0px;
+  text-align: left;
+}
+
+section > h2 {
+  font-size: 30px;
+  color: #ca6865;
+  text-align: center;
+}
+
+#nav-text {
+  justify-content: flex-end;
+}
+
+#nav-text > :first-child {
+  width: 70%;
+}
+
+#text-next-to-hab-image {
+  width: 40%;
+  height: 100%;
+  padding: 25px;
+  height: 75%;
+}
+
+#text-next-to-hab-image > p {
+  width: 100%;
+  font-size: 20px;
+}
+
+#member-list {
+  width: 25%;
+  left: 37.5%;
+}
+
+.background-image {
+  height: 1100px;
+}
+
+section.contact-body > * > h2 {
+  font-family: NotoSansKR, Arial;
+  color: #000000;
+  height: fit-content;
+  text-align: center;
+}
+
+.mobile-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.send {
+  background-color: #ffa3a3;
+  border: #ffa3a3;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.sent {
+  background-color: transparent;
+  border: transparent;
+  cursor: text;
+  border-radius: 5px;
+}
+
+#mobile-override {
+  height: 100%;
+  width: 100%;
+}
+
+form.contact-form > label {
+  font-family: NotoSansKR, Arial, Helvetica, sans-serif;
+  color: black;
+  font-weight: bold;
+  font-size: large;
+  text-align: center;
+}
+
+.error {
+  color: red;
+}
+
+.join-us > * > h1{
     font-family: Catamaran;
-    color: white;
-    font-weight: 100;
+    text-align: center;
+    font-size: 60px;
+}
+
+@media (max-width: 1400px) {
+  #nav-text {
+    justify-content: center;
+  }
+  #nav-text > :last-child {
+    width: 100%;
+  }
+  #nav-text > :first-child {
+    width: 10%;
+  }
+  #header-under-logo {
+    font-size: 2.5vmax;
+    min-width: 75%;
+  }
+}
+
+@media (max-width: 1300px) {
+  #hab-balloon {
+    display: none;
+  }
+  #text-next-to-hab-image {
+    text-align: center;
     width: 60%;
-}
-
-.about-section > p{
-    color: black;
-    font-family: Catamaran;
-    margin: 0;
-    width: fit-content;
-}
-
-.about-section > h2{
-    color: black;
-    font-family: Catamaran;
-}
-
-
-.headshot-section{
-    display: flex;
-    flex-direction: column; 
-    height: 100%;
-    align-items: flex-start;
-    justify-content: space-evenly;
-    padding: 5px;
-}
-
-.headshot-section > h2{
-    font-family: Catamaran;
-    color: #707070;
-    margin: 0px;
-    text-align: left;
-}
-
-section > h2{
-    font-size: 30px; 
-    color: #ca6865;
-    text-align: center;
-}
-
-#nav-text{
-    justify-content: flex-end;
-}
-
-#nav-text > :first-child{
+    padding-top: 100px;
+  }
+  #text-next-to-hab-image > p {
+    width: 100%;
+    font-size: 16px;
+  }
+  #text-next-to-hab-image > h2 {
+    font-size: 24px;
+  }
+  #member-list {
     width: 70%;
-}
-
-#text-next-to-hab-image{
-    width: 40%;
-    height: 100%;
-    padding: 25px; 
-    height: 75%;
-}
-
-#text-next-to-hab-image > p{
-    width: 100%;
+    left: 15%;
+  }
+  #member-list > p {
     font-size: 20px;
+  }
 }
 
-#member-list{
-    width: 25%;
-    left: 37.5%;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
 }
 
-.background-image{
-    height: 1100px;
+.fade-leave {
+  opacity: 1;
 }
 
-section.contact-body >* > h2 {
-    font-family: NotoSansKR, Arial;
-    color: #000000;
-    height: fit-content;
-    text-align: center;
+.fade-leave-to {
+  opacity: 0;
 }
 
-.mobile-wrapper{
-    height: 100%;
-    width: 100%;
+.fade-enter {
+  opacity: 0;
 }
 
-.send{
-    background-color: #ffa3a3;
-    border: #ffa3a3;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.sent{
-    background-color: transparent;
-    border: transparent;
-    cursor: text;
-    border-radius: 5px;
-}
-
-#mobile-override{
-    height: 100%;
-    width: 100%;
-}
-
-form.contact-form > label{
-    font-family: NotoSansKR, Arial, Helvetica, sans-serif;
-    color: black;
-    font-weight: bold;
-    font-size: large;
-    text-align: center;
-}
-
-.error{
-    color: red;
-}
-
-@media (max-width: 1400px){
-    #nav-text{
-        justify-content: center;
-    }
-    #nav-text > :last-child{
-        width: 100%;
-    }
-    #nav-text > :first-child{
-        width: 10%;
-    }
-    #header-under-logo{
-        font-size: 2.5vmax;
-        min-width: 75%;
-    }
-}
-
-@media (max-width: 1300px){
-    #hab-balloon{
-        display: none;
-    }
-    #text-next-to-hab-image{
-        text-align: center;
-        width: 60%;
-        padding-top: 100px; 
-    }
-    #text-next-to-hab-image > p{
-        width: 100%;
-        font-size: 16px;
-    }
-    #text-next-to-hab-image > h2{
-        font-size: 24px;
-    }
-    #member-list{
-        width: 70%;
-        left: 15%;
-    }
-    #member-list > p{
-        font-size: 20px;
-    }
-}
-
-.fade-enter-active, .fade-leave-active{
-    transition: opacity .5s ease
-}
-
-.fade-leave{
-    opacity: 1;
-}
-
-.fade-leave-to{
-    opacity: 0;
-
-}
-
-.fade-enter{
-    opacity: 0;
-}
-
-.fade-enter-to{
-    opacity: 1;
+.fade-enter-to {
+  opacity: 1;
 }

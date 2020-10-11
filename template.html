@@ -76,8 +76,103 @@
                     blog
                 </a>
             </nav>
-        </header>
     </header>
+    <footer id="default-footer">
+        <style>
+        #footer{
+            background-color: #272727;
+            width: 100%;
+            height: 200px;
+            display: flex;
+            padding: 25px;
+        }
+        #footer > section{
+            height: 100%;
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        #footer > section > section{
+            flex: 1 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-evenly;
+        }
+        #footer > * > * > p{
+            font-family: NotoSansKR, Arial;
+            font-size: 15px;
+            font-weight: lighter;
+        }
+        #footer > * > h1{
+            color: white;
+            font-family: NotoSansKR, Arial;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        #footer > * > * > a{
+            color: white;
+            font-family: NotoSansKR, Arial;
+            font-weight: lighter;
+            font-size: 15px;
+        }
+        </style>
+        <section id="footer">
+            <section>
+                <h1>
+                    LEE Send2Space
+                </h1>
+                <section>
+                    <p>
+                        Send2Space is a 501(c)(3) nonprofit organization dedicated to improving STEM education by building high-altitude balloons. LEE Send2Space welcomes
+                        all students interested in any field.
+                    </p>
+                    <p>
+                        © Lance Ellis, All Rights Reserved
+                    </p>
+                </section>
+            </section>
+            <section>
+                <h1>
+                    Quick Links
+                </h1>
+                <section>
+                    <a>
+                        Home
+                    </a>
+                    <a>
+                        About
+                    </a>
+                    <a>
+                        Blog
+                    </a>
+                    <a>
+                        Contact Us
+                    </a>
+                    <a>
+                        Join Us
+                    </a>
+                    <a>
+                        Sponsor Us
+                    </a>
+                </section>
+            </section>
+            <section>
+                <h1>
+                    Follow us
+                </h1>
+                <section>
+                    <a>
+                        Instagram
+                    </a>
+                </section>
+            </section>
+            <section>
+                
+            </section>
+        </section>
+    </footer>
 </html>
 
 <!-- RewriteRule ^([^\.]+)$ $1.html [NC,L] -->
