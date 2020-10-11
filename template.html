@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css" href="normalize.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="icon" href="images/websiteicon.jpg">
     </head>
     <header id="default-header">
@@ -88,7 +88,7 @@
         }
         #footer > section{
             height: 100%;
-            width: 25%;
+            width: 33%;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -102,20 +102,28 @@
         }
         #footer > * > * > p{
             font-family: NotoSansKR, Arial;
-            font-size: 15px;
+            font-size: 13px;
             font-weight: lighter;
         }
         #footer > * > h1{
             color: white;
             font-family: NotoSansKR, Arial;
             font-weight: bold;
-            font-size: 20px;
+            font-size: 18px;
         }
         #footer > * > * > a{
             color: white;
             font-family: NotoSansKR, Arial;
             font-weight: lighter;
-            font-size: 15px;
+            font-size: 13px;
+        }
+        #footer > * > * > a:hover{
+            color: #af130d;
+        }
+        @media(max-width: 800px){
+            #footer > * > * > p{
+                width: 100%;
+            }
         }
         </style>
         <section id="footer">
@@ -129,7 +137,7 @@
                         all students interested in any field.
                     </p>
                     <p>
-                        © Lance Ellis, All Rights Reserved
+                        © 2020 Lance Ellis, All Rights Reserved
                     </p>
                 </section>
             </section>
@@ -138,38 +146,41 @@
                     Quick Links
                 </h1>
                 <section>
-                    <a>
+                    <a href="/">
                         Home
                     </a>
-                    <a>
+                    <a href="/about.html">
                         About
                     </a>
-                    <a>
+                    <a href="/blog.html">
                         Blog
                     </a>
-                    <a>
+                    <a href="/contact.html">
                         Contact Us
                     </a>
-                    <a>
+                    <a href="/join-us.html">
                         Join Us
                     </a>
-                    <a>
+                    <a href="/sponsor.html">
                         Sponsor Us
                     </a>
                 </section>
             </section>
             <section>
                 <h1>
-                    Follow us
+                    Contact us
                 </h1>
                 <section>
-                    <a>
+                    <a href="https://www.instagram.com/send2space_lee/">
                         Instagram
                     </a>
+                    <a href="mailto:legacyhs@send2space.org">
+                        Email
+                    </a>
+                    <a href="/contact.html">
+                        Contact Us Page
+                    </a>
                 </section>
-            </section>
-            <section>
-                
             </section>
         </section>
     </footer>

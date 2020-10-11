@@ -9,20 +9,30 @@
     <link rel="icon" href="images/websiteicon.png" />
   </head>
   <body>
-      <section class="join-us" id="mobile-override" data-barba="wrapper">
-          <main data-barba="container">
-            <header id="header">
-                <script>
-                    $("#header").load("template.html #default-header");
-                </script>
-            </header>
-            <h1>
-                Want to join the team?
-            </h1>
-          </main>
-      </section>
-      <script src="barba.js"></script>
-      <script src="barba-css.js"></script>
-      <script src="transitions.js"></script>
+    <section id="mobile-override" data-barba="wrapper">
+      <main data-barba="container">
+        <header id="header">
+          <script>
+            $("#header").load("template.html #default-header");
+          </script>
+        </header>
+        <img
+          src="images/groupphoto2.JPG"
+          width="100%"
+          style="position: absolute; top: 0; left: 0; z-index: -2"
+        />
+        <section class="join-us">
+          <h1>Want to join us?</h1>
+        </section>
+      </main>
+      <!-- <footer id="footer1">
+        <script>
+          $("#footer1").load("template.html #default-footer")
+        </script>
+      </footer> -->
+    </section>
+    <script src="barba.js"></script>
+    <script src="barba-css.js"></script>
+    <script src="transitions.js"></script>
   </body>
 </html>

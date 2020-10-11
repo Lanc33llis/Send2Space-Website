@@ -8,7 +8,7 @@ barba.init({
         let bodyLinks = document.querySelectorAll("body");
         let href = next.url.path;
 
-        if (href === "/blog.html" || href === "/contact.html") {
+        if (href === "/blog.html") {
           bodyLinks[0].classList.add("blog");
         } else {
           bodyLinks[0].classList.remove("blog");
@@ -16,6 +16,7 @@ barba.init({
       },
       afterEnter() {
         $("#header").load("template.html #default-header");
+        $("#footer1").load("template.html #default-footer");
       },
     },
   ],
