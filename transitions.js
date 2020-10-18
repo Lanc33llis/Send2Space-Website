@@ -13,6 +13,11 @@ barba.init({
         } else {
           bodyLinks[0].classList.remove("blog");
         }
+
+        // window.scrollTo({
+        //   top: 0,
+        //   behavior: "smooth",
+        // });
       },
       afterEnter() {
         $("#header").load("template.html #default-header");

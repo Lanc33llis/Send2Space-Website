@@ -7,3 +7,18 @@ INFO: Unsupported notification method: $/setTraceNotification
 2020.10.11 12:03:51 INFO  started: Metals version 0.9.4 in workspace 'C:\Users\Lance\Documents\Send2Space-Website' for client vscode.
 2020.10.11 12:03:52 INFO  time: initialize in 0.45s
 2020.10.11 12:03:52 WARN  no build tool detected in workspace 'C:\Users\Lance\Documents\Send2Space-Website'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+Oct 11, 2020 2:39:47 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTraceNotification
+2020.10.11 21:09:56 INFO  shutting down Metals
+2020.10.12 11:28:58 INFO  started: Metals version 0.9.4 in workspace 'C:\Users\Lance\Documents\Send2Space-Website' for client vscode.
+2020.10.12 11:28:59 INFO  time: initialize in 0.37s
+2020.10.12 11:28:59 WARN  no build tool detected in workspace 'C:\Users\Lance\Documents\Send2Space-Website'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.10.12 11:31:22 INFO  shutting down Metals
+2020.10.12 19:11:08 INFO  started: Metals version 0.9.4 in workspace 'C:\Users\Lance\Documents\Send2Space-Website' for client vscode.
+2020.10.12 19:11:08 INFO  time: initialize in 0.38s
+2020.10.12 19:11:09 WARN  no build tool detected in workspace 'C:\Users\Lance\Documents\Send2Space-Website'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.10.12 19:14:43 INFO  shutting down Metals
+2020.10.15 14:10:52 INFO  started: Metals version 0.9.4 in workspace 'C:\Users\Lance\Documents\Send2Space-Website' for client vscode.
+2020.10.15 14:10:53 INFO  time: initialize in 0.38s
+2020.10.15 14:10:53 WARN  no build tool detected in workspace 'C:\Users\Lance\Documents\Send2Space-Website'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.10.15 14:53:06 INFO  shutting down Metals
