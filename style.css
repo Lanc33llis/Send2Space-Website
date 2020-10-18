@@ -188,10 +188,12 @@ form.contact-form > label {
   font-weight: bold;
   font-size: large;
   text-align: center;
+  cursor: text;
 }
 
 .error {
   color: red;
+  cursor: text;
 }
 
 .join-us{
