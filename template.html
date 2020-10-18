@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css" href="normalize.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="icon" href="images/websiteicon.jpg">
     </head>
     <header id="default-header">
@@ -72,14 +72,118 @@
                 <a class="nav-text" href="/about.html">
                     about
                 </a>
-                <a class="nav-text" href="https://send2space.blogspot.com/">
+                <a class="nav-text" href="/blog.html">
                     blog
                 </a>
             </nav>
-        </header>
     </header>
-    <svg width="150" height="150">
-        <circle cx="75" cy="75" r="75" fill="#EC475B"/>
-    </svg>
+    <footer id="default-footer">
+        <style>
+        #footer{
+            background-color: #272727;
+            width: 100%;
+            height: 200px;
+            display: flex;
+            padding: 25px;
+        }
+        #footer > section{
+            height: 100%;
+            width: 33%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        #footer > section > section{
+            flex: 1 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-evenly;
+        }
+        #footer > * > * > p{
+            font-family: NotoSansKR, Arial;
+            font-size: 13px;
+            font-weight: lighter;
+        }
+        #footer > * > h1{
+            color: white;
+            font-family: NotoSansKR, Arial;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        #footer > * > * > a{
+            color: white;
+            font-family: NotoSansKR, Arial;
+            font-weight: lighter;
+            font-size: 13px;
+        }
+        #footer > * > * > a:hover{
+            color: #af130d;
+        }
+        @media(max-width: 800px){
+            #footer > * > * > p{
+                width: 100%;
+            }
+        }
+        </style>
+        <section id="footer">
+            <section>
+                <h1>
+                    LEE Send2Space
+                </h1>
+                <section>
+                    <p>
+                        Send2Space is a 501(c)(3) nonprofit organization dedicated to improving STEM education by building high-altitude balloons. LEE Send2Space welcomes
+                        all students interested in any field.
+                    </p>
+                    <p>
+                        © 2020 LEE Send2Space, All Rights Reserved
+                    </p>
+                </section>
+            </section>
+            <section>
+                <h1>
+                    Quick Links
+                </h1>
+                <section>
+                    <a href="/">
+                        Home
+                    </a>
+                    <a href="/about.html">
+                        About
+                    </a>
+                    <a href="/blog.html">
+                        Blog
+                    </a>
+                    <a href="/contact.html">
+                        Contact Us
+                    </a>
+                    <a href="/join-us.html">
+                        Join Us
+                    </a>
+                    <a href="/sponsor.html">
+                        Sponsor Us
+                    </a>
+                </section>
+            </section>
+            <section>
+                <h1>
+                    Contact us
+                </h1>
+                <section>
+                    <a href="https://www.instagram.com/send2space_lee/">
+                        Instagram
+                    </a>
+                    <a href="mailto:legacyhs@send2space.org">
+                        Email
+                    </a>
+                    <a href="/contact.html">
+                        Contact Us Page
+                    </a>
+                </section>
+            </section>
+        </section>
+    </footer>
 </html>
 
+<!-- RewriteRule ^([^\.]+)$ $1.html [NC,L] -->

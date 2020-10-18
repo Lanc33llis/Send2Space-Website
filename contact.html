@@ -1,82 +1,148 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Contact</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="stylesheet" type="text/css" href="normalize.css">
-        <link rel="stylesheet" type="text/css" href="mobile.css">
-        <!-- <meta http-equiv="refresh" content="0; URL='/wip.html'"/> -->
-        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-        <link rel="icon" href="images/websiteicon.png">
-    </head>
-    <style>
-        body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            overflow-y: hidden;
-        }
-        html {
-            height: 100%;
-        }
-        #rocket{
-            top: -100px;
-            animation-name: rocketanim;
-            animation-duration: 5s;
-            animation-iteration-count: infinite;
-        }
-        @keyframes rocketanim{
-            0%   {top:-100px;}
-            20%  {top:-400px;}
-            40%  {top:-300px;}
-            60%  {top:-500px;}
-            80%  {top:-600px;}
-            100% {top:-100px;}
-        }
-    </style>
-    <body>
-        <section class="mobile-wrapper" style="width: 200%; height: 100%; display: flex; flex-direction: column;">
-            <header id="header" style="position: fixed; flex: 0 1 auto;">
-                <script>
-                    $("#header").load("/template.html #default-header")
-                </script>
-            </header>
-            <div style="width: 100%; height: 75px"></div>
-            <section style="flex: 1 1 auto; width: 50%;">
-                <section style="display: flex; justify-content: center; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; align-content: center;">
-                    <img src="images/Rocketship-01.svg" width="100px">
-                </section>
-                <section style="display: flex; justify-content: center; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
-                    <img src="images/rocketshiptrails.svg" width="100px" style="position: relative; top: -100px; left: -2px">
-                </section>
+  <head>
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="mobile.css" />
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link rel="icon" href="images/websiteicon.png" />
+  </head>
+  <body data-barba="wrapper">
+    <main
+      class="mobile-wrapper"
+      data-barba="container"
+      data-barba-namespace="form"
+    >
+      <section
+        style="width: 100%; height: 100%; display: flex; flex-direction: column"
+      >
+        <!-- this is very ugly fix -->
+        <header id="header">
+          <script>
+            $("#header").load("/template.html #default-header");
+          </script>
+        </header>
+        <section style="flex: 1 1; display: flex; flex-direction: column">
+          <h1
+            style="
+              text-align: center;
+              font-family: NotoSansKR;
+              font-weight: bold;
+              font-size: 60px;
+              margin: 20px 0px 6px 0px;
+            "
+          >
+            Want to get in contact with us?
+          </h1>
+          <p
+            style="
+              color: black;
+              text-align: center;
+              width: 100%;
+              margin: 5px 0px 25px 0px;
+            "
+          >
+            Drop us a message of any sorts. Questions, fundraising, what's our
+            favorite color, etc.
+          </p>
+          <section class="contact-body" style="display: flex; flex: 1 1">
+            <section
+              style="
+                display: flex;
+                width: 50%;
+                height: 100%;
+                flex-direction: column;
+                align-items: center;
+              "
+            >
+              <form
+                class="contact-form"
+                method="GET"
+                autocomplete="off"
+                action="/contact.html"
+                id="contact"
+                style="
+                  margin: 5px;
+                  flex: 1 1;
+                  width: 99%;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-evenly;
+                  align-items: center;
+                "
+              >
+                <label>Name?<label class="error" id="nameerror"></label></label>
+                <input
+                  name="name"
+                  id="name"
+                  autocomplete="off"
+                  for="name"
+                  style="width: 90%; height: 6%"
+                  placeholder="Adam Smith..."
+                />
+                <label
+                  >Email?<label class="error" id="emailerror"></label
+                ></label>
+                <input
+                  name="_replyto"
+                  id="email"
+                  for="email"
+                  autocomplete="off"
+                  style="width: 90%; height: 6%"
+                  placeholder="youremail@gmail.com..."
+                />
+                <label
+                  >Message:<label class="error" id="messageerror"></label
+                ></label>
+                <textarea
+                  name="message"
+                  id="message"
+                  for="message"
+                  autocomplete="off"
+                  style="
+                    width: 90%;
+                    height: 50%;
+                    text-align: left;
+                    padding: 3px;
+                  "
+                ></textarea>
+                <input
+                  type="submit"
+                  value="send!"
+                  id="sendform"
+                  class="send"
+                  style="font-family: NotoSansKR; width: 10%; height: 5%"
+                />
+              </form>
             </section>
+            <section
+              style="
+                display: flex;
+                width: 50%;
+                height: 100%;
+                flex-direction: column;
+                justify-content: space-around;
+                align-self: center;
+                background-image: url(/images/contactbg.svg);
+                background-repeat: repeat-x;
+              "
+            >
+              <h2 id="test">Contact us at our email legacyhs@send2space.org</h2>
+              <h2>or at our instagram lee_send2space</h2>
+              <h2>or use this form here</h2>
+            </section>
+          </section>
         </section>
-    </body>
-    <script>
-        //https://taufik-nurrohman.js.org/dte-project/full-page-horizontal-scrolling.html
-        // http://www.dte.web.id/2013/02/event-mouse-wheel.html
-        function scrollHorizontally(e) {
-            e = window.event || e;
-            var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-            document.documentElement.scrollLeft -= (delta*40); // Multiplied by 40
-            document.body.scrollLeft -= (delta*40); // Multiplied by 40
-            e.preventDefault();
-        }
-
-        if (window.addEventListener){
-            // IE9, Chrome, Safari, Opera
-            window.addEventListener("mousewheel", scrollHorizontally, false);
-            // Firefox
-            window.addEventListener("DOMMouseScroll", scrollHorizontally, false);
-        } 
-        else{
-            // IE 6/7/8
-            window.attachEvent("onmousewheel", scrollHorizontally);
-        }
-    </script>
-
-    <script src="barba.js"></script>
-    <script src="barba-css.js"></script>
-    <script src="script.js"></script>
-
+      </section>
+      <footer id="footer1">
+        <script>
+          $("#footer1").load("template.html #default-footer");
+        </script>
+      </footer>
+    </main>
+  </body>
+  <script src="barba.js"></script>
+  <script src="barba-css.js"></script>
+  <script src="transitions.js"></script>
 </html>

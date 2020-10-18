@@ -1,2 +1,48 @@
 <!DOCTYPE html>
-<meta http-equiv="refresh" content="0; URL='/wip.html'"/>
+<html>
+  <head>
+    <title>Join Us</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="mobile.css" />
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link rel="icon" href="images/websiteicon.png" />
+  </head>
+  <body>
+    <section id="mobile-override" data-barba="wrapper">
+      <main data-barba="container" style="height: 100%">
+        <img
+          src="images/groupphoto2.JPG"
+          width="100%"
+          style="position: absolute; top: 0; left: 0; z-index: -2; clip-path: polygon(0 0, 100% 0%, 100% 70%, 0 70%);"
+        />
+        <section style="display: flex; width: 100%; height: 100%; flex-direction: column;">
+          <header id="header">
+            <script>
+              $("#header").load("template.html #default-header");
+            </script>
+          </header>
+          <section class="join-us" style="flex: 1 1; display: flex; flex-direction: column;">
+            <h2 style="color: black; background-color: white; border-radius: 3px;">Want to join us?</h2>
+            <h1 style="color: white; background-color: black; border-radius: 3px;">LEE Send2Space is looking for bright, passionate students curious about STEM.</h1>
+            <h2 style="color: black; background-color: white; border-radius: 3px;">Registration is open to any high school student in San Antonio</h2>
+          </section>
+        </section>
+        <section style="width: 100%; height: 100px; background-color: rgb(255, 162, 40); clip-path: polygon(0 45%, 100% 0, 100% 100%, 0% 100%);"><h1>hello</h1></section>
+        <section style="width: 100%; height: 300px; background-color: rgb(255, 162, 40);">
+          <h1>
+            Why join us?
+          </h1>
+        </section>
+        <footer id="footer1">
+          <script>
+            $("#footer1").load("template.html #default-footer")
+          </script>
+        </footer>
+      </main>
+    </section>
+    <script src="barba.js"></script>
+    <script src="barba-css.js"></script>
+    <script src="transitions.js"></script>
+  </body>
+</html>
