@@ -24,7 +24,6 @@
         }
         #nav-section{
             display: flex; 
-            justify-content: space-evenly; 
             z-index: 4; 
             height: 100%;
             width: 30%;
@@ -61,6 +60,7 @@
             }
         }
         </style>
+
         <a id="instagram-photo" href="https://www.instagram.com/send2space_lee/">
             <svg viewBox="0 0 199.98 199.97" xmlns="http://www.w3.org/2000/svg" style="height: 100%;">
                 <defs>
@@ -109,7 +109,7 @@
             <!-- <img src="/images/instagram2.svg" style="height: 100%"> -->
         </a>
         <section id="header-section">
-            <nav id="nav-section">
+            <nav class="ie-flex"  id="nav-section">
                 <a class="nav-text" href="/">
                     home
                 </a>
@@ -142,7 +142,6 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            justify-content: space-evenly;
         }
         #footer > * > * > p{
             font-family: NotoSansKR, Arial;
@@ -170,6 +169,7 @@
             }
         }
         </style>
+        <script src="//cdn.jsdelivr.net/npm/less"></script>
         <section id="footer">
             <section>
                 <h1>
@@ -189,7 +189,7 @@
                 <h1>
                     Quick Links
                 </h1>
-                <section>
+                <section class="ie-flex">
                     <a href="/">
                         Home
                     </a>
@@ -210,11 +210,11 @@
                     </a>
                 </section>
             </section>
-            <section>
+            <section >
                 <h1>
                     Contact us
                 </h1>
-                <section>
+                <section class="ie-flex">
                     <a href="https://www.instagram.com/send2space_lee/">
                         Instagram
                     </a>

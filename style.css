@@ -99,7 +99,8 @@ section > p {
   color: black;
   font-family: Catamaran;
   margin: 0;
-  width: fit-content;
+  width: auto;
+  font-size: 24px;
 }
 
 .about-section > h2 {
@@ -142,6 +143,7 @@ section > h2 {
   height: 100%;
   padding: 25px;
   height: 75%;
+  text-align: center;
 }
 
 #text-next-to-hab-image > p {
@@ -198,9 +200,13 @@ form.contact-form > label {
   cursor: text;
 }
 
-.join-us{
-  justify-content: space-evenly;
+section.join-us{
   align-items: center;
+}
+@media screen and (min-width:0) and (min-resolution: +72dpi) { 
+  .join-us{
+    justify-content: space-between;
+  }
 }
 
 .join-us > h1{
@@ -244,6 +250,16 @@ h1.join-us-header-text{
 
 a.join-us-nav-text{
   color: white;
+}
+
+.ie-flex{
+  justify-content: space-around;
+}
+
+@supports not (-ms-ime-align: auto) {
+  .ie-flex {
+    justify-content: space-evenly
+  }
 }
 
 @media (max-width: 1400px) {

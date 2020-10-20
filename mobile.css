@@ -10,6 +10,10 @@ Index home page mobile stuff
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
+      body, #mobile-override{
+        position: relative;
+        overflow-x: hidden;
+      }
       #nav-text{
         min-height: 125px;
       }
