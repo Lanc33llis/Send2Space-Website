@@ -1,5 +1,7 @@
 barba.use(barbaCss);
 
+const notFinished = ["/sponsor.html", "/donate.html"]
+
 barba.init({
   transitions: [
     {
@@ -10,18 +12,44 @@ barba.init({
 
         if (href === "/blog.html") {
           bodyLinks[0].classList.add("blog");
+        } else if (notFinished.indexOf(href) != -1){
+          barba.go("/wip.html")
         } else {
           bodyLinks[0].classList.remove("blog");
         }
 
-        // window.scrollTo({
-        //   top: 0,
-        //   behavior: "smooth",
-        // });
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
       },
-      afterEnter() {
-        $("#header").load("template.html #default-header");
-        $("#footer1").load("template.html #default-footer");
+      afterEnter({current, next, trigger}) {
+        $("#header").load("template.html #default-header", function(){
+          let header = document.getElementById("header-section")
+          let text = document.querySelectorAll(".nav-text")
+          let igPhoto = document.getElementsByClassName("cls-5")[0]
+          let href= next.url.path
+          if (href === "/join-us.html"){
+            try{
+              header.classList.add("transparent-header")
+              text.forEach(function (e, index){e.classList.add("join-us-nav-text")})
+              igPhoto.style.fill = "#fff"
+            }
+            catch(e){
+              console.log(e)
+            }
+          } else{
+            try{
+              header.classList.remove("transparent-header")
+              text.forEach(function (e, index){e.classList.remove("join-us-nav-text")})
+              igPhoto.style.fill = "#000"
+            }
+            catch(e){
+              console.log(e)
+            }
+          }
+        })
+        $("#footer1").load("template.html #default-footer")
       },
     },
   ],
