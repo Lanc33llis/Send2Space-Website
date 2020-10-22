@@ -327,3 +327,34 @@ a.join-us-nav-text{
 a:hover {
   color: #af130d !important;
 }
+
+.donate-body{
+  background-color: rgb(134, 61, 61);
+  height: 2300px;
+}
+
+.donate-main-picture{
+  position: -webkit-sticky;
+  position: sticky;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  top: 0px;
+}
+.donate-main-picture > h1, .donate-picture-left > h1{
+  font-family: NotoSansKR, Arial, Helvetica, sans-serif;
+}
+
+.donate-picture-left{
+  height: 25%;
+  width: 50%;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

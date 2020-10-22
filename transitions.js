@@ -1,6 +1,6 @@
 barba.use(barbaCss);
 
-const notFinished = ["/sponsor.html", "/donate.html"]
+const notFinished = ["/join-us.html", "/donate.html"]
 
 barba.init({
   transitions: [
