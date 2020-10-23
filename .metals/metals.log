@@ -22,3 +22,28 @@ INFO: Unsupported notification method: $/setTraceNotification
 2020.10.15 14:10:53 INFO  time: initialize in 0.38s
 2020.10.15 14:10:53 WARN  no build tool detected in workspace 'C:\Users\Lance\Documents\Send2Space-Website'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
 2020.10.15 14:53:06 INFO  shutting down Metals
+2020.10.19 11:52:03 INFO  started: Metals version 0.9.4 in workspace 'C:\Users\Lance\Documents\Send2Space-Website' for client vscode.
+2020.10.19 11:52:04 INFO  time: initialize in 1.29s
+2020.10.19 11:52:05 WARN  no build tool detected in workspace 'C:\Users\Lance\Documents\Send2Space-Website'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.10.19 15:17:42 INFO  started: Metals version 0.9.4 in workspace 'C:\Users\Lance\Documents\Send2Space-Website' for client vscode.
+2020.10.19 15:17:44 INFO  time: initialize in 1.23s
+2020.10.19 15:17:48 WARN  no build tool detected in workspace 'C:\Users\Lance\Documents\Send2Space-Website'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.10.19 20:16:54 INFO  shutting down Metals
+2020.10.19 20:17:31 INFO  started: Metals version 0.9.4 in workspace 'C:\Users\Lance\Documents\Send2Space-Website' for client vscode.
+2020.10.19 20:17:32 INFO  time: initialize in 1.25s
+2020.10.19 20:17:32 WARN  no build tool detected in workspace 'C:\Users\Lance\Documents\Send2Space-Website'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+Oct 19, 2020 9:11:53 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTraceNotification
+Oct 19, 2020 9:12:31 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTraceNotification
+2020.10.20 11:16:20 INFO  started: Metals version 0.9.4 in workspace 'C:\Users\Lance\Documents\Send2Space-Website' for client vscode.
+2020.10.20 11:16:22 INFO  time: initialize in 1.85s
+2020.10.20 11:16:27 WARN  no build tool detected in workspace 'C:\Users\Lance\Documents\Send2Space-Website'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+Oct 20, 2020 11:20:22 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTraceNotification
+2020.10.20 13:59:40 INFO  started: Metals version 0.9.4 in workspace 'C:\Users\Lance\Documents\Send2Space-Website' for client vscode.
+2020.10.20 13:59:42 INFO  time: initialize in 1.99s
+2020.10.20 13:59:47 WARN  no build tool detected in workspace 'C:\Users\Lance\Documents\Send2Space-Website'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+Oct 20, 2020 3:04:41 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTraceNotification
+2020.10.20 16:07:22 INFO  shutting down Metals
