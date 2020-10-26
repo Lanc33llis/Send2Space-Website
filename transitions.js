@@ -119,5 +119,13 @@ barba.init({
         form.addEventListener("submit", submit);
       },
     },
+    {
+      namespace: "join-us",
+      beforeEnter({current, next, trigger}){
+        var parallax = document.createElement("script");
+        parallax.src = "parallax.min.js"
+        document.head.appendChild(parallax)
+      }
+    },
   ],
 });

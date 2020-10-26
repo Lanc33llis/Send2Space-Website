@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" type="text/css" href="mobile.css" />
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="parallax.min.js"></script>
     <link rel="icon" href="images/websiteicon.png" />
   </head>
   <body data-barba="wrapper">
@@ -14,11 +15,12 @@
       data-barba="container"
       data-barba-namespace="join-us"
       style="
-        background-image: url('/images/groupphoto2.JPG');
         height: 100%;
         display: flex;
-        flex-direction: column;
+        flex-direction: column; 
       "
+      data-parallax="scroll"
+      data-image-src="/images/groupphoto2.JPG"
     >
       <header id="header">
         <script>
@@ -44,7 +46,7 @@
       <section class="join-us" style="flex: 1 1">
         <section
           class="join-us"
-          style="display: flex; flex-direction: column; height: 800px"
+          style="display: flex; flex-direction: column; height: 850px"
         >
           <h1 class="join-us-header-text">Looking to the skies?</h1>
           <h1 class="join-us-header-text">
@@ -54,46 +56,29 @@
             Preparing for the first official launch this Fall!
           </h1>
         </section>
-        <section
-          class="join-us ie-flex"
-          style="width: 100%; height: fit-content; background-color: black"
-        >
-          <h1
-            class="join-us-header-text"
-            style="
-              text-align: left;
-              font-weight: 100;
-              padding-left: 100px;
-              padding-right: 150px;
-              font-size: 35px;
-            "
+        <section>
+          <section
+            class="join-us ie-flex"
+            style="width: 100%; height: fit-content; background-color: black; position: sticky; top: 0px;"
           >
-            Official LEE Send2Space Application Form
-          </h1>
-          <h1
-            class="join-us-header-text"
-            style="
-              text-align: left;
-              font-weight: 900;
-              padding-left: 100px;
-              padding-right: 150px;
-            "
-          >
-            Let's get together and learn how to be successful
-          </h1>
-          <h1
-            class="join-us-header-text"
-            style="
-              text-align: left;
-              font-weight: 100;
-              padding-left: 100px;
-              padding-right: 150px;
-              font-size: 35px;
-              margin-bottom: 0px;
-            "
-          >
-            Simply fill the google form below
-          </h1>
+            <h1
+              class="join-us-header-text"
+              style="
+                text-align: left;
+                font-weight: 900;
+                margin: 0px;
+                padding-left: 100px;
+                padding-right: 100px;
+                font-size: 125px;
+              "
+            >
+              Why join us?
+            </h1>
+          </section>
+          <section class="join-us ie-flex" style="background-color: black; height: 1000px;">
+        </section>
+        
+
         </section>
         <section
           style="
