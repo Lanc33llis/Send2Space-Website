@@ -7,5 +7,13 @@
     "azureFunctions.preDeployTask": "npm prune",
     "files.watcherExclude": {
         "**/target": true
-    }
+    },
+    "indentRainbow.colors": [
+        "rgba(0,0,0,0.07)",
+        "rgba(55,55,55,0.07)",
+        "rgba(100,100,100,0.07)",
+        "rgba(155,155,155,0.07)",
+        "rgba(200,200,200,0.07)",
+        "rgba(255,255,255,0.07)",
+    ]
 }

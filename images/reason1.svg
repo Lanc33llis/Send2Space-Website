@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.1 59.78">
+    <defs>
+        <style>
+            .cls-1 {
+                font-size: 55px;
+                fill: #fff;
+            }
+
+            .cls-2 {
+                letter-spacing: 0em;
+            }
+        </style>
+    </defs>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_1-2" data-name="Layer 1"><text class="cls-1" transform="translate(0 46.04)">&lt;/<tspan
+                    class="cls-2" x="51.64" y="0">h</tspan>
+                <tspan x="81.95" y="0">tml&gt;</tspan>
+            </text></g>
+    </g>
+</svg>

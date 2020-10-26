@@ -256,6 +256,40 @@ a.join-us-nav-text{
   justify-content: space-around;
 }
 
+.why-join-us{
+  display: grid;
+  padding: 0px 150px 0px 150px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.why-join-us > section > h1{
+  color: white;
+  font-family: NotoSansKR, Arial, Helvetica;
+}
+
+.join-us-image{
+  height: 200px;
+  position: relative;
+  top: 50px;
+  transition: opacity .3s ease-in, transform .3s ease-in;
+  opacity: 0;
+}
+
+.join-us-in-view{
+  opacity: 1;
+  transform: translateY(-50px);
+}
+
+.join-us-reason{
+  align-self: center;
+  justify-self: center;
+}
+
+.join-us-reason > h1{
+  text-align: center;
+}
+
 @supports not (-ms-ime-align: auto) {
   .ie-flex {
     justify-content: space-evenly

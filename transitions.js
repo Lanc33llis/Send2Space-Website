@@ -1,6 +1,6 @@
 barba.use(barbaCss);
 
-const notFinished = ["/join-us.html", "/donate.html"]
+const notFinished = ["/sponsor.html", "/donate.html"]
 
 barba.init({
   transitions: [
@@ -34,6 +34,17 @@ barba.init({
               header.classList.add("transparent-header")
               text.forEach(function (e, index){e.classList.add("join-us-nav-text")})
               igPhoto.style.fill = "#fff"
+              try{
+                console.log("tried adding para to #join-us-para");
+                $("#join-us-para").parallax({imageSrc: "/images/groupphoto2.JPG"});
+              }
+              catch(e){
+                console.log(e)
+                console.log("failed")
+              }
+              let paraElement = document.getElementsByClassName("parallax-mirror")
+              let paraImage = paraElement[0].children[0]
+              paraImage.style.display = "inherit"
             }
             catch(e){
               console.log(e)
@@ -43,6 +54,9 @@ barba.init({
               header.classList.remove("transparent-header")
               text.forEach(function (e, index){e.classList.remove("join-us-nav-text")})
               igPhoto.style.fill = "#000"
+              let paraElement = document.getElementsByClassName("parallax-mirror")
+              let paraImage = paraElement[0].children[0]
+              paraImage.style.display = "none"
             }
             catch(e){
               console.log(e)
@@ -121,10 +135,22 @@ barba.init({
     },
     {
       namespace: "join-us",
-      beforeEnter({current, next, trigger}){
-        var parallax = document.createElement("script");
-        parallax.src = "parallax.min.js"
-        document.head.appendChild(parallax)
+      afterEnter({current, next, trigger}){
+        let images = document.querySelectorAll(".join-us-image")
+        let obs = new IntersectionObserver(entries => {
+          entries.forEach(entry =>{
+            if (entry.intersectionRatio >= .1){
+              entry.target.classList.add("join-us-in-view")
+            } else{
+              entry.target.classList.remove("join-us-in-view")
+            }
+          })
+        }, {
+          threshold: [0, .3, 1]
+        })
+        images.forEach(image => {
+          obs.observe(image)
+        })
       }
     },
   ],
