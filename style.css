@@ -272,7 +272,7 @@ a.join-us-nav-text{
   height: 200px;
   position: relative;
   top: 50px;
-  transition: opacity .3s ease-in, transform .3s ease-in;
+  transition: opacity .4s ease-in, transform .4s ease-in;
   opacity: 0;
 }
 
