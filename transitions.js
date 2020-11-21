@@ -101,6 +101,8 @@ barba.init({
             }
           }
 
+          //code below does not work during the first load of the website.
+
           let topHeader = document.getElementById("header")
 
           let headerSlideDown = [
