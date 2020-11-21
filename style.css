@@ -19,29 +19,29 @@
   src: url(fonts/Catamaran.ttf) format("truetype");
 }
 
-@font-face {
-  font-family: "NotoSansKR";
+/* @font-face {
+  font-family: "NotoSansKRR";
   src: url(fonts/NotoSansKR-Regular.otf) format("opentype");
   font-weight: normal;
 }
 
 @font-face {
-  font-family: "NotoSansKR";
+  font-family: "NotoSansKRR";
   src: url(fonts/NotoSansKR-Bold.otf) format("opentype");
   font-weight: bold;
 }
 
 @font-face{
-  font-family: "NotoSansKR";
+  font-family: "NotoSansKRR";
   src: url(fonts/NotoSansKR-Light.otf) format("opentype");
   font-weight: lighter;
 }
 
 @font-face{
-  font-family: "NotoSansKR";
+  font-family: "NotoSansKRR";
   src: url(fonts/NotoSansKR-Thin.otf) format("opentype");
   font-weight: 100;
-}
+} */
 
 html {
   height: 100%;
@@ -156,7 +156,7 @@ section > h2 {
 }
 
 section.contact-body > * > h2 {
-  font-family: NotoSansKR, Arial;
+  font-family: 'Noto Sans KR', Arial;
   color: #000000;
   height: fit-content;
   text-align: center;
@@ -187,7 +187,7 @@ section.contact-body > * > h2 {
 }
 
 form.contact-form > label {
-  font-family: NotoSansKR, Arial, Helvetica, sans-serif;
+  font-family: 'Noto Sans KR', Arial, Helvetica, sans-serif;
   color: black;
   font-weight: bold;
   font-size: large;
@@ -202,6 +202,13 @@ form.contact-form > label {
 
 section.join-us{
   align-items: center;
+}
+
+.header-load-in{
+  position: sticky;
+  top: 0px;
+  background-color: rgba(255, 255, 255, .25);  
+  box-shadow: 0px 10px 6px rgba(0, 0, 0, .15); 
 }
 @media screen and (min-width:0) and (min-resolution: +72dpi) { 
   .join-us{
@@ -241,7 +248,7 @@ main > section{
 
 h1.join-us-header-text{
   color: #fff;
-  font-family: NotoSansKR, Arial, Helvetica, sans-serif;
+  font-family: 'Noto Sans KR', Arial, Helvetica, sans-serif;
   border-radius: 3px;
   padding-left: 4px;
   padding-right: 4px;
@@ -265,7 +272,7 @@ a.join-us-nav-text{
 
 .why-join-us > section > h1{
   color: white;
-  font-family: NotoSansKR, Arial, Helvetica;
+  font-family: 'Noto Sans KR', Arial, Helvetica;
 }
 
 .join-us-image{
@@ -294,6 +301,10 @@ a.join-us-nav-text{
   .ie-flex {
     justify-content: space-evenly
   }
+}
+
+.contact-header{
+  font-family: 'Noto Sans KR';
 }
 
 @media (max-width: 1400px) {
@@ -380,7 +391,7 @@ a:hover {
   top: 0px;
 }
 .donate-main-picture > h1, .donate-picture-left > h1{
-  font-family: NotoSansKR, Arial, Helvetica, sans-serif;
+  font-family: 'Noto Sans KR', Arial, Helvetica, sans-serif;
 }
 
 .donate-picture-left{

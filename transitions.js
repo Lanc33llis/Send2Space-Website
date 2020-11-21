@@ -2,10 +2,45 @@ barba.use(barbaCss);
 
 const notFinished = ["/sponsor.html", "/donate.html"]
 
+var scrolled = false
+
+function loadHeaderFont(){
+  var headerFont = document.createElement("link")
+  headerFont.type = "text/css"
+  headerFont.rel = "stylesheet"
+  headerFont.id = "headerFont"
+  try{
+    if (document.getElementById("headerFont") == null){
+      document.body.appendChild(headerFont)
+      headerFont.href = "https://fonts.googleapis.com/css?family=Noto+Sans+KR:300"
+    }
+  }
+  catch(e){}
+}
+
+function detectBrowser() { 
+  if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) {
+      return 'Opera';
+  } else if(navigator.userAgent.indexOf("Chrome") != -1 ) {
+      return 'Chrome';
+  } else if(navigator.userAgent.indexOf("Safari") != -1) {
+      return 'Safari';
+  } else if(navigator.userAgent.indexOf("Firefox") != -1 ){
+      return 'Firefox';
+  } else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) {
+      return 'IE';//crap
+  } else {
+      return 'Unknown';
+  }
+} 
+
 barba.init({
   transitions: [
     {
       name: "fade",
+      once({ current, next, trigger }){
+        loadHeaderFont()
+      },
       beforeEnter({ current, next, trigger }) {
         let bodyLinks = document.querySelectorAll("body");
         let href = next.url.path;
@@ -22,8 +57,11 @@ barba.init({
           top: 0,
           behavior: "smooth",
         });
+
+        loadHeaderFont()
       },
       afterEnter({current, next, trigger}) {
+        loadHeaderFont()
         $("#header").load("template.html #default-header", function(){
           let header = document.getElementById("header-section")
           let text = document.querySelectorAll(".nav-text")
@@ -62,6 +100,36 @@ barba.init({
               console.log(e)
             }
           }
+
+          let topHeader = document.getElementById("header")
+
+          let headerSlideDown = [
+            {top: '-200px'},
+            {top: '-100px'},
+            {top: '0px'}
+          ]
+          let animted = false
+
+          window.addEventListener("scroll", async function() {
+            if (document.body.scrollTop > header.offsetHeight || document.documentElement.scrollTop > header.offsetHeight){
+              topHeader.classList.add("header-load-in")
+              if(animted == false){
+                topHeader.animate(headerSlideDown, {duration: 500, iteration: 1})
+                animted = true
+              }
+            } else{
+              let browser = detectBrowser()
+              if (browser == "Chrome"){
+                if (document.documentElement.scrollTop == 0){
+                  topHeader.classList.remove("header-load-in")
+                  animted = false
+                }
+              } else if (browser == "MSIE"){
+                topHeader.classList.remove("header-load-in")
+                animted = false
+              } 
+            }
+          })
         })
         $("#footer1").load("template.html #default-footer")
       },
