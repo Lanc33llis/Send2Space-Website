@@ -99,3 +99,7 @@ INFO: Unsupported notification method: $/setTraceNotification
 2020.11.19 10:40:33 WARN  Build server is not auto-connectable.
 2020.11.19 10:40:33 WARN  no build tool detected in workspace 'C:\Users\Lance\Documents\Send2Space-Website'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
 2020.11.19 10:50:33 INFO  shutting down Metals
+2020.11.21 13:52:49 INFO  Started: Metals version 0.9.6 in workspace 'C:\Users\Lance\Documents\Send2Space-Website' for client vscode.
+2020.11.21 13:52:51 INFO  time: initialize in 1.97s
+2020.11.21 13:52:52 WARN  Build server is not auto-connectable.
+2020.11.21 13:52:52 WARN  no build tool detected in workspace 'C:\Users\Lance\Documents\Send2Space-Website'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
