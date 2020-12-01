@@ -88,55 +88,66 @@ barba.init({
           bodyLinks[0].classList.remove("blog");
         }
 
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
+        if (href === "/join-us.html"){
+          try{
+            try{
+              try{
+                let paraElement = document.getElementsByClassName("parallax-mirror")
+                let paraImage = paraElement[0].children[0]
+                let anim = paraImage.animate([{opacity: 0}, {opacity: .25}, {opacity: .5}, {opacity: .75}, {opacity: 1}], {iteration: 1, duration: 500})
+                anim.onfinish = function(){paraImage.style.display = "block"}
+              } catch(e){}
+              console.log("tried adding para to #join-us-para");
+              $("#join-us-para").parallax({imageSrc: "/images/groupphoto2.JPG"});
+            }
+            catch(e){
+              console.log(e)
+              console.log("failed")
+            }
+          }
+          catch(e){
+            console.log(e)
+          }
+        } else{
+          try{
+            let paraElement = document.getElementsByClassName("parallax-mirror")
+            let paraImage = paraElement[0].children[0]
+            if (paraImage.style.opacity == "0"){} else{
+              let anim = paraImage.animate([{opacity: 1}, {opacity: .75}, {opacity: .5}, {opacity: .25}, {opacity: 0}], {iteration: 1, duration: 500})
+              anim.onfinish = function(){paraImage.style.display = "none"}
+              
+            }
+          }
+          catch(e){
+            console.log(e)
+          }
+        }
 
-        loadHeaderFont()
-      },
-      afterEnter({current, next, trigger}) {
-        loadHeaderFont()
         $("#header").load("template.html #default-header", function(){
           let header = document.getElementById("header-section")
           let text = document.querySelectorAll(".nav-text")
           let igPhoto = document.getElementsByClassName("cls-5")[0]
-          let href= next.url.path
           if (href === "/join-us.html"){
             try{
               header.classList.add("transparent-header")
               text.forEach(function (e, index){e.classList.add("join-us-nav-text")})
               igPhoto.style.fill = "#fff"
-              try{
-                console.log("tried adding para to #join-us-para");
-                $("#join-us-para").parallax({imageSrc: "/images/groupphoto2.JPG"});
-              }
-              catch(e){
-                console.log(e)
-                console.log("failed")
-              }
-              let paraElement = document.getElementsByClassName("parallax-mirror")
-              let paraImage = paraElement[0].children[0]
-              paraImage.style.display = "inherit"
-            }
-            catch(e){
-              console.log(e)
-            }
+            } catch(e){}
           } else{
             try{
               header.classList.remove("transparent-header")
               text.forEach(function (e, index){e.classList.remove("join-us-nav-text")})
               igPhoto.style.fill = "#000"
-              let paraElement = document.getElementsByClassName("parallax-mirror")
-              let paraImage = paraElement[0].children[0]
-              paraImage.style.display = "none"
-            }
-            catch(e){
-              console.log(e)
-            }
+            } catch(e){}
           }
-          initializeHeader()
         })
+
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+        loadHeaderFont()
+        initializeHeader()
         $("#footer1").load("template.html #default-footer")
       },
     },
@@ -209,6 +220,9 @@ barba.init({
     },
     {
       namespace: "join-us",
+      beforeEnter({current, next, trigger}){
+
+      },
       afterEnter({current, next, trigger}){
         let images = document.querySelectorAll(".join-us-image")
         let obs = new IntersectionObserver(entries => {
