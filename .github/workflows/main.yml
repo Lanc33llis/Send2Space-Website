@@ -1,0 +1,68 @@
+# This is a basic workflow to help you get started with Actions
+
+
+name: CI
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  deploy:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+
+      # Runs a set of commands using the runners shell
+      - name: FTP Deployment
+        # You may pin to the exact commit or the version.
+        # uses: airvzxf/ftp-deployment-action@e090fe45a9436e3f9e5d94ff1f8fcb118f25cffc
+        uses: airvzxf/ftp-deployment-action@latest
+        with:
+          # FTP Server.
+          server: ftpupload.net
+          # FTP User.
+          user: epiz_26369830
+          # FTP Password.
+          password: 2cfPG2SgQcEEGi
+          # Local directory.
+          local_dir: ./
+          # Remote directory.
+          remote_dir: /htdocs/
+          # Delete all the files inside of the remote directory.
+          delete: false
+          # Times that the lftp will be executed if an error occurred.
+          max_retries: 10
+          # Do not create symbolic links.
+          no_symlinks: true
+          # FTP - Allow SSL encryption.
+          ftp_ssl_allow: false
+          # FTP - FEAT: Determining what extended features the FTP server supports.
+          ftp_use_feat: false
+          # FTP - Delay in seconds between NOOP commands when downloading tail of a file.
+          ftp_nop_interval: 2
+          # NET - Maximum number of operation without success. 0 unlimited. 1 no retries.
+          net_max_retries: 1
+          # NET - Ignore hard errors. When reply 5xx errors or there is too many users.
+          net_persist_retries: 5
+          # NET - Sets the network protocol timeout.
+          net_timeout: 15s
+          # DNS - 0 no limit trying to lookup an address otherwise try only this number of times.
+          dns_max_retries: 8
+          # DNS - Time for DNS queries. Set to "never" to disable.
+          dns_fatal_timeout: 10
