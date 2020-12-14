@@ -403,3 +403,14 @@ a:hover {
   justify-content: center;
   align-items: center;
 }
+
+.img-sponsor{
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  transition: filter .75s ease-in
+}
+
+img.img-sponsor-in-view{
+  -webkit-filter: none;
+  filter: none;
+}

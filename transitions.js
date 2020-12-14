@@ -91,14 +91,11 @@ barba.init({
         if (href === "/join-us.html"){
           try{
             try{
-              try{
-                let paraElement = document.getElementsByClassName("parallax-mirror")
-                let paraImage = paraElement[0].children[0]
-                let anim = paraImage.animate([{opacity: 0}, {opacity: .25}, {opacity: .5}, {opacity: .75}, {opacity: 1}], {iteration: 1, duration: 500})
-                anim.onfinish = function(){paraImage.style.display = "block"}
-              } catch(e){}
               console.log("tried adding para to #join-us-para");
               $("#join-us-para").parallax({imageSrc: "/images/groupphoto2.JPG"});
+              let paraElement = document.getElementsByClassName("parallax-mirror")
+              let paraImage = paraElement[0].children[0]
+              let anim = paraImage.animate([{opacity: 0}, {opacity: .25}, {opacity: .5}, {opacity: .75}, {opacity: 1}], {iteration: 1, duration: 300})
             }
             catch(e){
               console.log(e)
@@ -114,8 +111,7 @@ barba.init({
             let paraImage = paraElement[0].children[0]
             if (paraImage.style.opacity == "0"){} else{
               let anim = paraImage.animate([{opacity: 1}, {opacity: .75}, {opacity: .5}, {opacity: .25}, {opacity: 0}], {iteration: 1, duration: 500})
-              anim.onfinish = function(){paraImage.style.display = "none"}
-              
+              anim.onfinish = function(){paraImage.style.display = "none"}   
             }
           }
           catch(e){
@@ -241,5 +237,25 @@ barba.init({
         })
       }
     },
+    {
+      namespace: "home",
+      afterEnter({current, next, trigger}){
+        let images = document.querySelectorAll(".img-sponsor")
+        let obs = new IntersectionObserver(entries => {
+          entries.forEach(entry =>{
+            if (entry.intersectionRatio >= .1){
+              entry.target.classList.add("img-sponsor-in-view")
+            } else{
+              entry.target.classList.remove("img-sponsor-in-view")
+            }
+          })
+        }, {
+          threshold: [0, .3, 1]
+        })
+        images.forEach(image => {
+          obs.observe(image)
+        })
+      },
+    }
   ],
 });
